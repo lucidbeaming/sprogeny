@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12">
+        <h2>Generated Playlists</h2>
+        <p class="text-muted">Your new playlists have been created successfully!</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    {% for playlist in playlists %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ playlist.name }}</h5>
+                <a href="{{ playlist.url }}" target="_blank" 
+                   class="btn btn-success mt-3">Open in Spotify</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-4">
+    <div class="col-12">
+        <a href="{{ url_for('index') }}" class="btn btn-primary">
+            Generate More Playlists
+        </a>
+    </div>
+</div>
+{% endblock %} 
