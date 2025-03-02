@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="text-center">Welcome to Sprogeny</h2>
+            </div>
+            <div class="card-body">
+                <p class="text-center">Enter a Spotify username to view their public playlists and create new derivative playlists.</p>
+                
+                <form action="{{ url_for('search') }}" method="post" class="mt-4">
+                    <div class="form-group">
+                        <label for="username">Spotify Username:</label>
+                        <input type="text" class="form-control" id="username" name="username" required
+                               placeholder="Enter Spotify username">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary">Search Playlists</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

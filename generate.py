@@ -2,6 +2,7 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 from random import shuffle, choice
 import logging
+import os
 from typing import Dict, List
 
 # Configure logging
@@ -12,10 +13,13 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
+SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
+
 # Spotify API Authentication
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
-    client_id="c05d1fc625b348cb8629e283a7d80d83",
-    client_secret="d1787e438ea84b63b57d3bd17240e2ad",
+    client_id=SPOTIFY_CLIENT_ID,
+    client_secret=SPOTIFY_CLIENT_SECRET,
     redirect_uri="https://lucidbeaming.com",
     scope="user-library-read playlist-modify-public"
 ))
