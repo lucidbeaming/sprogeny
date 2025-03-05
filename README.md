@@ -8,7 +8,7 @@ A Flask web application that generates new Spotify playlists from existing ones 
 - Select a playlist to generate new derivative playlists
 - Automatic playlist generation with creative naming
 - Direct links to open generated playlists in Spotify
-- Modern, responsive web interface
+- Modern and responsive web interface
 
 ## Installation
 
