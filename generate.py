@@ -3,7 +3,11 @@ from spotipy.oauth2 import SpotifyOAuth
 from random import shuffle, choice
 import logging
 import os
-from typing import Dict, List
+from typing import List
+from dotenv import load_dotenv
+
+# Add before accessing environment variables
+load_dotenv()
 
 # Configure logging
 logging.basicConfig(
@@ -15,20 +19,28 @@ logger = logging.getLogger(__name__)
 
 SPOTIFY_CLIENT_ID = os.getenv('SPOTIFY_CLIENT_ID')
 SPOTIFY_CLIENT_SECRET = os.getenv('SPOTIFY_CLIENT_SECRET')
-
+SPOTIFY_REDIRECT_URI = os.getenv('SPOTIFY_REDIRECT_URI')
 # Spotify API Authentication
 sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
     client_id=SPOTIFY_CLIENT_ID,
     client_secret=SPOTIFY_CLIENT_SECRET,
-    redirect_uri="https://lucidbeaming.com",
-    scope="user-library-read playlist-modify-public"
+    redirect_uri=SPOTIFY_REDIRECT_URI,
+    scope="user-library-read playlist-modify-public playlist-modify-private"
 ))
 
+REQUEST_LIMIT = 100
+PLAYLIST_LENGTH = 200
+PLAYLIST_ID_ARRAY = ["2iy3nUibZu1C6SvlMKEPJv"]
+
+# Lists for storing track data
+tracks = []
+track_lists = {
+    'tracks1': [],
+    'tracks2': [],
+    'tracks3': []
+}
+
 def verify_spotify_auth():
-    """
-    Verify Spotify authentication and required permissions.
-    Returns True if all checks pass, False otherwise.
-    """
     try:
         # Test basic authentication by getting current user
         user = sp.current_user()
@@ -86,25 +98,7 @@ def verify_spotify_auth():
         logger.error("Please verify your credentials and try again.")
         return False
 
-# Constants
-REQUEST_LIMIT = 100
-SOURCE_PLAYLIST_ID = "2iy3nUibZu1C6SvlMKEPJv"
-TRACK_RANGES = {
-    'tracks1': (999, 2000, 2),    # start, end, step
-    'tracks2': (1999, 3000, 2),
-    'tracks3': (399, 900, 1)
-}
-
-# Lists for storing track data
-tracks = []
-track_lists = {
-    'tracks1': [],
-    'tracks2': [],
-    'tracks3': []
-}
-
 def get_playlist_tracks(playlist_id, fields=None, limit=REQUEST_LIMIT, offset=0, market=None, additional_types=('track', 'episode')):
-    """Fetch tracks from a playlist with error handling."""
     try:
         return sp.playlist_items(playlist_id, fields, limit, offset, market, additional_types)
     except Exception as e:
@@ -112,42 +106,50 @@ def get_playlist_tracks(playlist_id, fields=None, limit=REQUEST_LIMIT, offset=0,
         return None
 
 def fetch_and_shuffle_tracks():
-    """Fetch all tracks from source playlist and shuffle them."""
-    try:
-        # Get total number of tracks
-        playlist_info = get_playlist_tracks(SOURCE_PLAYLIST_ID)
-        if not playlist_info:
+    for playlist_id in PLAYLIST_ID_ARRAY:
+        try:
+            # Get total number of tracks
+            playlist_info = get_playlist_tracks(playlist_id)
+            if not playlist_info:
+                return False
+            
+            total_tracks = playlist_info["total"]
+            logger.info(f"Total tracks to process: {total_tracks}")
+
+            # Fetch all tracks in batches
+            for i in range(0, total_tracks, REQUEST_LIMIT):
+                request_buffer = get_playlist_tracks(
+                    playlist_id,
+                    "items(track(name,id))",
+                    REQUEST_LIMIT,
+                    i
+                )
+                if request_buffer:
+                    tracks.extend(request_buffer["items"])
+                    logger.info(f"Fetched tracks {i} to {min(i + REQUEST_LIMIT, total_tracks)}")
+
+            # Double shuffle for better randomization
+            shuffle(tracks)
+            shuffle(tracks)
+
+            # Add check for empty tracks
+            if not tracks:
+                logger.error("No tracks were fetched")
+                return False
+
+            return True
+        except Exception as e:
+            logger.error(f"Error in fetch_and_shuffle_tracks: {e}")
             return False
-        
-        total_tracks = playlist_info["total"]
-        logger.info(f"Total tracks to process: {total_tracks}")
-
-        # Fetch all tracks in batches
-        for i in range(0, total_tracks, REQUEST_LIMIT):
-            request_buffer = get_playlist_tracks(
-                SOURCE_PLAYLIST_ID,
-                "items(track(name,id))",
-                REQUEST_LIMIT,
-                i
-            )
-            if request_buffer:
-                tracks.extend(request_buffer["items"])
-                logger.info(f"Fetched tracks {i} to {min(i + REQUEST_LIMIT, total_tracks)}")
-
-        # Double shuffle for better randomization
-        shuffle(tracks)
-        shuffle(tracks)
-        return True
-    except Exception as e:
-        logger.error(f"Error in fetch_and_shuffle_tracks: {e}")
-        return False
 
 def process_track_lists():
-    """Process tracks into separate lists based on defined ranges."""
     try:
-        for list_name, (start, end, step) in TRACK_RANGES.items():
-            track_subset = tracks[start:end:step]
+        track_index = 0
+        for list_name in track_lists:
+            end_index = min(track_index + PLAYLIST_LENGTH, len(tracks))
+            track_subset = tracks[track_index:end_index]
             track_lists[list_name] = [val['track']['id'] for val in track_subset if val['track']['id'] is not None]
+            track_index += PLAYLIST_LENGTH
             logger.info(f"Processed {len(track_lists[list_name])} tracks for {list_name}")
         return True
     except Exception as e:
@@ -166,7 +168,6 @@ ANIMAL_NAMES = [
 ]
 
 def create_and_populate_playlist(track_list: List[str]) -> str:
-    """Create a new playlist and populate it with tracks. Returns playlist ID if successful."""
     try:
         # Generate playlist name using adjective-animal style
         nomen = f"{choice(ADJECTIVES)} {choice(ANIMAL_NAMES)}"
@@ -182,7 +183,7 @@ def create_and_populate_playlist(track_list: List[str]) -> str:
         logger.info(f"Created playlist: {nomen} ({playlist['id']})")
 
         # Add tracks in batches
-        for i in range(100, 300, 100):
+        for i in range(0, len(track_list), 100):
             batch = track_list[i:i+100]
             if batch:
                 sp.playlist_add_items(playlist['id'], batch)
@@ -194,7 +195,6 @@ def create_and_populate_playlist(track_list: List[str]) -> str:
         return None
 
 def display_playlist_contents(playlist_id: str) -> None:
-    """Display the contents of a playlist."""
     try:
         playlist = sp.playlist(playlist_id)
         logger.info(f"\nPlaylist: {playlist['name']}")
@@ -211,7 +211,6 @@ def display_playlist_contents(playlist_id: str) -> None:
         logger.error(f"Error displaying playlist contents: {e}")
 
 def main():
-    """Main execution function."""
     logger.info("Starting Spotify playlist processing...")
 
     # Verify authentication before proceeding
