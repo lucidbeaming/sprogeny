@@ -5,13 +5,22 @@ import logging
 import os
 from typing import List
 from dotenv import load_dotenv
+import sqlite3
 
 # Add before accessing environment variables
 load_dotenv()
 
+db_connection = sqlite3.connect("duplicate_tracks.db")
+db_cursor = db_connection.cursor()
+db_cursor.execute("CREATE TABLE IF NOT EXISTS used_ids(id)")
+db_cursor.execute("SELECT * FROM used_ids")
+used_ids = db_cursor.fetchall()
+# Extract IDs from tuples to create a flat list
+used_ids = [id_tuple[0] for id_tuple in used_ids]
+
 # Configure logging
 logging.basicConfig(
-    level=logging.DEBUG,
+    level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
@@ -107,6 +116,7 @@ def get_playlist_tracks(playlist_id, fields=None, limit=REQUEST_LIMIT, offset=0,
 
 def fetch_and_shuffle_tracks():
     for playlist_id in PLAYLIST_ID_ARRAY:
+        
         try:
             # Get total number of tracks
             playlist_info = get_playlist_tracks(playlist_id)
@@ -131,6 +141,7 @@ def fetch_and_shuffle_tracks():
             # Double shuffle for better randomization
             shuffle(tracks)
             shuffle(tracks)
+            shuffle(tracks)
 
             # Add check for empty tracks
             if not tracks:
@@ -143,14 +154,24 @@ def fetch_and_shuffle_tracks():
             return False
 
 def process_track_lists():
+    track_ids = [val['track']['id'] for val in tracks[0:len(tracks)] if val['track']['id'] is not None]
+    # Create a new list with only the tracks that aren't in used_ids
+    filtered_track_ids = [track_id for track_id in track_ids if track_id not in used_ids]
+    # Log how many tracks were filtered out
+    removed_count = len(track_ids) - len(filtered_track_ids)
+    if removed_count > 0:
+        logger.info(f"Removed {removed_count} tracks that were already used")
+    # Replace the original list with the filtered one
+    track_ids = filtered_track_ids
+
     try:
         track_index = 0
         for list_name in track_lists:
-            end_index = min(track_index + PLAYLIST_LENGTH, len(tracks))
-            track_subset = tracks[track_index:end_index]
-            track_lists[list_name] = [val['track']['id'] for val in track_subset if val['track']['id'] is not None]
-            track_index += PLAYLIST_LENGTH
+            end_index = min(track_index + PLAYLIST_LENGTH, len(track_ids))
+            track_subset = track_ids[track_index:end_index]
+            track_lists[list_name] = track_subset
             logger.info(f"Processed {len(track_lists[list_name])} tracks for {list_name}")
+            track_index += PLAYLIST_LENGTH
         return True
     except Exception as e:
         logger.error(f"Error processing track lists: {e}")
@@ -187,6 +208,13 @@ def create_and_populate_playlist(track_list: List[str]) -> str:
             batch = track_list[i:i+100]
             if batch:
                 sp.playlist_add_items(playlist['id'], batch)
+                try:
+                    for item in batch:
+                        db_cursor.execute("INSERT INTO used_ids(id) VALUES (?)", (item,))
+                        logger.info(f"inserting into used_ids: {item}")
+                        db_connection.commit()
+                except Exception as e:
+                    logger.error(f"Error inserting into used_ids: {e}")
                 logger.info(f"Added {len(batch)} tracks to {nomen}")
 
         return playlist['id']
@@ -242,6 +270,7 @@ def main():
         display_playlist_contents(playlist_id)
 
     logger.info("\nProcess completed successfully!")
+    db_connection.close()
 
 if __name__ == "__main__":
     main() 
