@@ -6,6 +6,7 @@ import os
 from typing import List
 from dotenv import load_dotenv
 import sqlite3
+import argparse
 
 # Add before accessing environment variables
 load_dotenv()
@@ -39,8 +40,13 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
 
 REQUEST_LIMIT = 100
 PLAYLIST_LENGTH = 200
-PLAYLIST_ID_ARRAY = ["2iy3nUibZu1C6SvlMKEPJv"]
-
+PLAYLIST_ID_ARRAY = ["2iy3nUibZu1C6SvlMKEPJv", "28pi8Ls7Suydu2Cmu3YVW7", "13xKy2z1TZRkW3OPOtWdvq", "0auF3aEpOVlDsCyTge7dsk"]
+PLAYLIST_LABELS = {
+    "aax": 0,
+    "ranger": 1,
+    "classical": 2,
+    "nostalgia": 3
+}
 # Lists for storing track data
 tracks = []
 track_lists = {
@@ -114,18 +120,38 @@ def get_playlist_tracks(playlist_id, fields=None, limit=REQUEST_LIMIT, offset=0,
         logger.error(f"Error fetching playlist tracks: {e}")
         return None
 
-def fetch_and_shuffle_tracks():
-    for playlist_id in PLAYLIST_ID_ARRAY:
-        
+def fetch_and_shuffle_tracks(playlist_ids=None, weights=None):
+    if playlist_ids is None:
+        playlist_ids = PLAYLIST_ID_ARRAY
+        weights = [1.0] * len(PLAYLIST_ID_ARRAY)  # Default equal weights
+    
+    # Validate weights
+    if weights is None:
+        weights = [1.0] * len(playlist_ids)
+    elif len(weights) != len(playlist_ids):
+        logger.error("Number of weights must match number of playlist IDs")
+        return False
+    
+    # Normalize weights to sum to 1
+    total_weight = sum(weights)
+    weights = [w/total_weight for w in weights]
+    
+    # Clear tracks list before populating
+    tracks.clear()
+    all_playlist_tracks = {}  # Store tracks from each playlist separately
+    
+    # First, fetch all tracks from each playlist
+    for idx, playlist_id in enumerate(playlist_ids):
         try:
+            playlist_tracks = []
             # Get total number of tracks
             playlist_info = get_playlist_tracks(playlist_id)
             if not playlist_info:
                 return False
             
             total_tracks = playlist_info["total"]
-            logger.info(f"Total tracks to process: {total_tracks}")
-
+            logger.info(f"Total tracks to process for playlist {playlist_id}: {total_tracks}")
+            
             # Fetch all tracks in batches
             for i in range(0, total_tracks, REQUEST_LIMIT):
                 request_buffer = get_playlist_tracks(
@@ -135,23 +161,40 @@ def fetch_and_shuffle_tracks():
                     i
                 )
                 if request_buffer:
-                    tracks.extend(request_buffer["items"])
+                    playlist_tracks.extend(request_buffer["items"])
                     logger.info(f"Fetched tracks {i} to {min(i + REQUEST_LIMIT, total_tracks)}")
-
-            # Double shuffle for better randomization
-            shuffle(tracks)
-            shuffle(tracks)
-            shuffle(tracks)
-
-            # Add check for empty tracks
-            if not tracks:
-                logger.error("No tracks were fetched")
+            
+            if not playlist_tracks:
+                logger.error(f"No tracks were fetched from playlist {playlist_id}")
                 return False
-
-            return True
+                
+            all_playlist_tracks[playlist_id] = playlist_tracks
+            
         except Exception as e:
-            logger.error(f"Error in fetch_and_shuffle_tracks: {e}")
+            logger.error(f"Error in fetch_and_shuffle_tracks for playlist {playlist_id}: {e}")
             return False
+    
+    # Now combine tracks based on weights
+    for idx, playlist_id in enumerate(playlist_ids):
+        playlist_tracks = all_playlist_tracks[playlist_id]
+        # Calculate number of tracks to take from this playlist
+        num_tracks = int(len(playlist_tracks) * weights[idx])
+        # Shuffle the playlist's tracks
+        shuffle(playlist_tracks)
+        # Take the calculated number of tracks
+        tracks.extend(playlist_tracks[:num_tracks])
+    
+    # Final shuffle of all combined tracks
+    shuffle(tracks)
+    shuffle(tracks)
+    shuffle(tracks)
+    
+    if not tracks:
+        logger.error("No tracks were fetched after combining playlists")
+        return False
+        
+    logger.info(f"Combined {len(tracks)} tracks from {len(playlist_ids)} playlists")
+    return True
 
 def process_track_lists():
     track_ids = [val['track']['id'] for val in tracks[0:len(tracks)] if val['track']['id'] is not None]
@@ -188,11 +231,11 @@ ANIMAL_NAMES = [
     "Panther", "Dragon", "Phoenix", "Raven", "Leopard", "Falcon"
 ]
 
-def create_and_populate_playlist(track_list: List[str]) -> str:
+def create_and_populate_playlist(track_list: List[str], source_label: str = "") -> str:
     try:
-        # Generate playlist name using adjective-animal style
-        nomen = f"{choice(ADJECTIVES)} {choice(ANIMAL_NAMES)}"
-
+        # Generate playlist name using adjective-animal style, prefixed by source label
+        prefix = f"{source_label} - " if source_label else ""
+        nomen = f"{prefix}{choice(ADJECTIVES)} {choice(ANIMAL_NAMES)}"
         # Create playlist
         playlist = sp.user_playlist_create(
             sp.me()['id'],
@@ -202,7 +245,6 @@ def create_and_populate_playlist(track_list: List[str]) -> str:
             description='Automatically generated playlist'
         )
         logger.info(f"Created playlist: {nomen} ({playlist['id']})")
-
         # Add tracks in batches
         for i in range(0, len(track_list), 100):
             batch = track_list[i:i+100]
@@ -216,7 +258,6 @@ def create_and_populate_playlist(track_list: List[str]) -> str:
                 except Exception as e:
                     logger.error(f"Error inserting into used_ids: {e}")
                 logger.info(f"Added {len(batch)} tracks to {nomen}")
-
         return playlist['id']
     except Exception as e:
         logger.error(f"Error in create_and_populate_playlist: {e}")
@@ -239,36 +280,70 @@ def display_playlist_contents(playlist_id: str) -> None:
         logger.error(f"Error displaying playlist contents: {e}")
 
 def main():
-    logger.info("Starting Spotify playlist processing...")
-
+    parser = argparse.ArgumentParser(description="Spotify Playlist Generator")
+    parser.add_argument(
+        '--source',
+        type=str,
+        default='combined',
+        help=f"Playlist source label: one of {list(PLAYLIST_LABELS.keys())} or 'combined' for all"
+    )
+    parser.add_argument(
+        '--weights',
+        type=str,
+        help="Comma-separated list of weights for each playlist (only used with --source combined). Example: '0.4,0.3,0.2,0.1'"
+    )
+    args = parser.parse_args()
+    logger.info(f"Starting Spotify playlist processing with source: {args.source}")
+    
     # Verify authentication before proceeding
     logger.info("Verifying Spotify authentication...")
     if not verify_spotify_auth():
         logger.error("Authentication verification failed. Exiting...")
         return
 
+    # Determine playlist IDs to use
+    if args.source == 'combined':
+        playlist_ids = PLAYLIST_ID_ARRAY
+        source_label = 'combined'
+        
+        # Parse weights if provided
+        weights = None
+        if args.weights:
+            try:
+                weights = [float(w.strip()) for w in args.weights.split(',')]
+                if len(weights) != len(playlist_ids):
+                    logger.error(f"Number of weights ({len(weights)}) must match number of playlists ({len(playlist_ids)})")
+                    return
+                logger.info(f"Using weights: {weights}")
+            except ValueError:
+                logger.error("Weights must be comma-separated numbers")
+                return
+    elif args.source in PLAYLIST_LABELS:
+        playlist_ids = [PLAYLIST_ID_ARRAY[PLAYLIST_LABELS[args.source]]]
+        source_label = args.source
+        weights = None
+    else:
+        logger.error(f"Invalid source label: {args.source}. Must be one of {list(PLAYLIST_LABELS.keys())} or 'combined'.")
+        return
+
     # Part 1: Fetch and process tracks
     logger.info("1. Fetching and shuffling tracks...")
-    if not fetch_and_shuffle_tracks():
+    if not fetch_and_shuffle_tracks(playlist_ids, weights):
         return
-    
     logger.info("2. Processing track lists...")
     if not process_track_lists():
         return
-
     logger.info("3. Creating and populating playlists...")
     # Create three playlists and store their IDs
-    playlist_ids = {}
+    playlist_ids_dict = {}
     for list_name in track_lists:
-        playlist_id = create_and_populate_playlist(track_lists[list_name])
+        playlist_id = create_and_populate_playlist(track_lists[list_name], source_label)
         if playlist_id:
-            playlist_ids[list_name] = playlist_id
-
+            playlist_ids_dict[list_name] = playlist_id
     logger.info("\nDisplaying contents of created playlists:")
-    for list_name, playlist_id in playlist_ids.items():
+    for list_name, playlist_id in playlist_ids_dict.items():
         logger.info(f"\nContents of {list_name}:")
         display_playlist_contents(playlist_id)
-
     logger.info("\nProcess completed successfully!")
     db_connection.close()
 
