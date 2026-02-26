@@ -40,12 +40,12 @@ sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
 
 REQUEST_LIMIT = 100
 PLAYLIST_LENGTH = 200
-PLAYLIST_ID_ARRAY = ["2iy3nUibZu1C6SvlMKEPJv", "28pi8Ls7Suydu2Cmu3YVW7", "13xKy2z1TZRkW3OPOtWdvq", "0auF3aEpOVlDsCyTge7dsk"]
+PLAYLIST_ID_ARRAY = ["2iy3nUibZu1C6SvlMKEPJv", "1YqP8kBdz7KWqSBw6xZVof", "5lt115WdOKwF2Ul18CUhhT"]
+PLAYLIST_ID_ARRAY_CLASSICAL = ["13xKy2z1TZRkW3OPOtWdvq"]
 PLAYLIST_LABELS = {
     "aax": 0,
-    "ranger": 1,
-    "classical": 2,
-    "nostalgia": 3
+    "berlin": 1,
+    "lghs": 2
 }
 # Lists for storing track data
 tracks = []
@@ -236,6 +236,9 @@ def create_and_populate_playlist(track_list: List[str], source_label: str = "") 
         # Generate playlist name using adjective-animal style, prefixed by source label
         prefix = f"{source_label} - " if source_label else ""
         nomen = f"{prefix}{choice(ADJECTIVES)} {choice(ANIMAL_NAMES)}"
+        if source_label == 'classical':
+            nomen = f"Classical {choice(ANIMAL_NAMES)}"
+
         # Create playlist
         playlist = sp.user_playlist_create(
             sp.me()['id'],
@@ -318,6 +321,10 @@ def main():
             except ValueError:
                 logger.error("Weights must be comma-separated numbers")
                 return
+    elif args.source == 'classical':
+        playlist_ids = PLAYLIST_ID_ARRAY_CLASSICAL
+        source_label = 'classical'
+        weights = None
     elif args.source in PLAYLIST_LABELS:
         playlist_ids = [PLAYLIST_ID_ARRAY[PLAYLIST_LABELS[args.source]]]
         source_label = args.source
