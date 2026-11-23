@@ -5,7 +5,11 @@ Generate new Spotify playlists from existing ones.
 ![Three steps: search a Spotify username, pick one of their playlists, and get three new playlists with generated names and "Open in Spotify" links](docs/images/flow.png)
 
 > [!WARNING]
-> **Spotify's February 2026 API changes break the app for Development Mode Spotify apps.** Listing another user's playlists (`GET /users/{id}/playlists`) was removed, playlist contents are only returned for playlists you own or collaborate on, and creating a playlist moved to `POST /me/playlists`. Existing Development Mode apps were migrated on March 9, 2026. The app still works with an Extended Quota Spotify app. See [#10](https://github.com/lucidbeaming/sprogeny/issues/10) for the details and the options.
+> **Spotify's 2026 API changes limit the app to 5 users and break the username search.**
+> - A Development Mode Spotify app allows at most **5 users, each added by hand** in the developer dashboard, and the app owner needs Spotify Premium. Individuals can't apply for Extended Quota (organizations only, since May 2025), so this can't run as a public site.
+> - Searching **another** user's playlists (`GET /users/{id}/playlists`) was removed, and creating a playlist moved to `POST /me/playlists`. Each signed-in user can still read and remix their **own** playlists, but the current code needs updating for that.
+>
+> Existing Development Mode apps were migrated on March 9, 2026. See [#10](https://github.com/lucidbeaming/sprogeny/issues/10) for the details and the options.
 
 Sprogeny is a small Flask app: enter a Spotify username, pick one of their public playlists, and it creates up to three new "offspring" playlists on your account, each a different shuffled slice of the original, with names like *Cosmic Owl* or *Vibrant Falcon*. It works best on very large playlists, where it surfaces tracks you'd never reach by scrolling.
 
@@ -13,7 +17,7 @@ Sprogeny is a small Flask app: enter a Spotify username, pick one of their publi
 
 - Python 3.9+
 - A Spotify app from the [Spotify developer dashboard](https://developer.spotify.com/dashboard) (client ID and secret), with your redirect URI registered. Spotify only accepts loopback IPs for local HTTP redirects, so register `http://127.0.0.1:5000/callback` and use the same value in `.env`.
-- Development Mode apps need the app owner to have Spotify Premium, and are limited to 5 users (see the warning above)
+- Spotify Premium on the app owner's account, and each user (up to 5) added under **User Management** in the app's dashboard (see the warning above)
 
 ## Installation
 
