@@ -1,70 +1,81 @@
 # Sprogeny
 
-A Flask web application that generates new Spotify playlists from existing ones using a unique algorithm.
+Generate new Spotify playlists from existing ones.
 
-## Features
+![Three steps: search a Spotify username, pick one of their playlists, and get three new playlists with generated names and "Open in Spotify" links](docs/images/flow.png)
 
-- Search for Spotify users and view their public playlists
-- Select a playlist to generate new derivative playlists
-- Automatic playlist generation with creative naming
-- Direct links to open generated playlists in Spotify
-- Modern, responsive web interface
+> [!WARNING]
+> **Spotify's February 2026 API changes break the app for Development Mode Spotify apps.** Listing another user's playlists (`GET /users/{id}/playlists`) was removed, playlist contents are only returned for playlists you own or collaborate on, and creating a playlist moved to `POST /me/playlists`. Existing Development Mode apps were migrated on March 9, 2026. The app still works with an Extended Quota Spotify app. See [#10](https://github.com/lucidbeaming/sprogeny/issues/10) for the details and the options.
+
+Sprogeny is a small Flask app: enter a Spotify username, pick one of their public playlists, and it creates up to three new "offspring" playlists on your account, each a different shuffled slice of the original, with names like *Cosmic Owl* or *Vibrant Falcon*. It works best on very large playlists, where it surfaces tracks you'd never reach by scrolling.
+
+## Requirements
+
+- Python 3.9+
+- A Spotify app from the [Spotify developer dashboard](https://developer.spotify.com/dashboard) (client ID and secret), with your redirect URI registered. Spotify only accepts loopback IPs for local HTTP redirects, so register `http://127.0.0.1:5000/callback` and use the same value in `.env`.
+- Development Mode apps need the app owner to have Spotify Premium, and are limited to 5 users (see the warning above)
 
 ## Installation
 
-1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sprogeny.git
+git clone https://github.com/lucidbeaming/sprogeny.git
 cd sprogeny
-```
-
-2. Create and activate a virtual environment:
-```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install dependencies:
-```bash
 pip install -r requirements.txt
-```
-
-4. Copy the example environment file and configure your settings:
-```bash
 cp .env.example .env
 ```
-Edit `.env` with your Spotify API credentials and other configuration.
 
-## Development
+Then fill in `.env` (see [Configuration](#configuration)).
 
-To run the development server:
+## Configuration
+
+| Variable | Required | Default | Description |
+|---|---|---|---|
+| `SPOTIFY_CLIENT_ID` | Yes | — | Spotify app client ID |
+| `SPOTIFY_CLIENT_SECRET` | Yes | — | Spotify app client secret |
+| `SPOTIFY_REDIRECT_URI` | No | `http://localhost:5000/callback` | OAuth redirect URI; must match the one registered with Spotify (use `http://127.0.0.1:5000/callback`) |
+| `FLASK_SECRET_KEY` | Recommended | random per start | Signs the session cookie; set it so sessions survive restarts |
+| `FLASK_APP` | No | — | `app.py`, for `flask run` |
+| `FLASK_DEBUG` | No | — | `1` for the debugger and auto-reload in development |
+
+On first use, spotipy runs the Spotify login in your browser and saves the token to `.cache` in the project folder. That file holds a refresh token: it's gitignored, so don't share it.
+
+## Usage
+
+Development server:
 
 ```bash
 flask run
 ```
 
-The application will be available at `http://localhost:5000`.
+Open `http://127.0.0.1:5000`, enter a Spotify username, choose a playlist, and the new playlists are created on the account you signed in with.
 
-## Production Deployment
-
-For production deployment using Gunicorn:
+Production, with Gunicorn:
 
 ```bash
 gunicorn wsgi:app
 ```
 
-## Configuration
+## How it works
 
-The following environment variables can be configured in `.env`:
+`app.py` reads every track in the chosen playlist, shuffles the list twice, then takes three slices:
 
-- `FLASK_APP`: The Flask application entry point
-- `FLASK_ENV`: The environment (development/production)
-- `FLASK_DEBUG`: Enable/disable debug mode
-- `FLASK_SECRET_KEY`: Secret key for session management
-- `SPOTIFY_CLIENT_ID`: Your Spotify API client ID
-- `SPOTIFY_CLIENT_SECRET`: Your Spotify API client secret
-- `SPOTIFY_REDIRECT_URI`: OAuth redirect URI
+| New playlist | Slice of the shuffled tracks | Size |
+|---|---|---|
+| 1 | positions 1,000–2,000, every second track | up to ~500 |
+| 2 | positions 2,000–3,000, every second track | up to ~500 |
+| 3 | positions 400–900, every track | up to ~500 |
+
+Each non-empty slice becomes a public playlist named from a random adjective and animal, filled in batches of 100. A source playlist needs more than 400 tracks to produce anything, and more than 2,000 to produce all three.
+
+`generate.py` is the earlier command-line version of the same idea. It works on one hard-coded source playlist (`SOURCE_PLAYLIST_ID`), checks the OAuth scopes first, and logs each step. The web app doesn't use it.
+
+## Related projects
+
+- [vid2midi](https://github.com/lucidbeaming/vid2midi): generates MIDI files from brightness levels in video
+- [p5-audio-visualizers](https://github.com/lucidbeaming/p5-audio-visualizers): fullscreen audio-reactive p5.js sketches
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+[MIT](LICENSE).
