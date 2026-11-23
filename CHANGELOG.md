@@ -11,6 +11,7 @@ All notable changes to this project are documented here. The format is based on 
 - Repository metadata (#5)
 
 ### Fixed
+- README frames the project as a proof of concept for a public service whose live deployment is restricted by Spotify's Development Mode limits (#10)
 - README warning puts the 5-user manual allowlist first, notes that Extended Quota is closed to individuals, and clarifies that each user can still use their own playlists (#10)
 - README clone URL pointed at a `yourusername` placeholder (#11)
 - Raised vulnerable pins: Flask 3.1.3, Werkzeug 3.1.9, gunicorn 27.0.1, spotipy 2.26.0, python-dotenv 1.2.4. spotipy 2.26 also reads and adds playlist items through Spotify's new `/items` endpoints (#4)
