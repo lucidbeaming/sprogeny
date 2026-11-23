@@ -11,6 +11,7 @@ All notable changes to this project are documented here. The format is based on 
 - Repository metadata (#5)
 
 ### Fixed
+- README: this Flask code is the original prototype. The live service is a newer SvelteKit version; this prototype won't be updated for the February 2026 Spotify API changes (#10)
 - README frames the project as a proof of concept for a public service whose live deployment is restricted by Spotify's Development Mode limits (#10)
 - README warning puts the 5-user manual allowlist first, notes that Extended Quota is closed to individuals, and clarifies that each user can still use their own playlists (#10)
 - README clone URL pointed at a `yourusername` placeholder (#11)

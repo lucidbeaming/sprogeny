@@ -5,11 +5,13 @@ Generate new Spotify playlists from existing ones.
 ![Three steps: search a Spotify username, pick one of their playlists, and get three new playlists with generated names and "Open in Spotify" links](docs/images/flow.png)
 
 > [!NOTE]
-> **A proof of concept for a public service. The live deployment is restricted.** Spotify only grants open, public API access (Extended Quota) to organizations whose existing service has at least 250,000 monthly active users and that pass partner vetting. Everyone else runs in Development Mode: at most **5 users, each added by hand** in the Spotify developer dashboard, with Spotify Premium on the owner's account. The code is public so the work can be seen. Using the live app means being added as one of those users.
+> **This is the original Flask prototype.** Sprogeny has since been rebuilt in SvelteKit. That version is the live service, a proof of concept for a public service, and its code isn't public yet.
 >
-> Spotify's February 2026 changes also removed searching **another** user's playlists (`GET /users/{id}/playlists`) and moved playlist creation to `POST /me/playlists`. Each signed-in user can still remix their **own** playlists. See [#10](https://github.com/lucidbeaming/sprogeny/issues/10).
+> Like any individual developer's Spotify app, the live service runs in Spotify's Development Mode. That means at most **5 users, each added by hand**, with Spotify Premium on the owner's account. Open public access (Extended Quota) is only for organizations whose existing service has at least 250,000 monthly active users and that pass partner vetting.
+>
+> This prototype predates Spotify's February 2026 API changes and isn't being updated for them. Its username search (`GET /users/{id}/playlists`) and playlist creation (`POST /users/{id}/playlists`) were removed for Development Mode apps. See [#10](https://github.com/lucidbeaming/sprogeny/issues/10).
 
-Sprogeny is a small Flask app, designed as a public web service: enter a Spotify username, pick one of their public playlists, and it creates up to three new "offspring" playlists on your account, each a different shuffled slice of the original, with names like *Cosmic Owl* or *Vibrant Falcon*. It works best on very large playlists, where it surfaces tracks you'd never reach by scrolling.
+This prototype is a small Flask app: enter a Spotify username, pick one of their public playlists, and it creates up to three new "offspring" playlists on your account, each a different shuffled slice of the original, with names like *Cosmic Owl* or *Vibrant Falcon*. It works best on very large playlists, where it surfaces tracks you'd never reach by scrolling.
 
 ## Requirements
 
