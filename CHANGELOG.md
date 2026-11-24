@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-11-23
+
+Final release of the original Flask prototype: enter a Spotify username, pick one of their public playlists, and get up to three shuffled "offspring" playlists. It predates Spotify's February 2026 API changes and won't be updated for them; v2.0.0 replaces it with the SvelteKit app behind sprogeny.com. This code stays available under the `flask-legacy` tag.
+
 ### Added
 - README: screenshots, Spotify API warning (#10), requirements, configuration defaults, how the three playlists are sliced, related projects (#11)
 
@@ -17,3 +21,6 @@ All notable changes to this project are documented here. The format is based on 
 - README clone URL pointed at a `yourusername` placeholder (#11)
 - Raised vulnerable pins: Flask 3.1.3, Werkzeug 3.1.9, gunicorn 27.0.1, spotipy 2.26.0, python-dotenv 1.2.4. spotipy 2.26 also reads and adds playlist items through Spotify's new `/items` endpoints (#4)
 - `.gitignore` regenerated from GitHub's Python template: wrapped comment lines had become 19 bogus ignore patterns. Adds macOS/editor/env entries and an explicit entry for spotipy's `.cache` token file (#7)
+
+[Unreleased]: https://github.com/lucidbeaming/sprogeny/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/lucidbeaming/sprogeny/releases/tag/v1.0.0
