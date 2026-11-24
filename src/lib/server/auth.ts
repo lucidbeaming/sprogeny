@@ -21,11 +21,14 @@ export const auth = betterAuth({
 	secret: env.BETTER_AUTH_SECRET,
 	database: drizzleAdapter(db, { provider: 'pg' }),
 	emailAndPassword: { enabled: false },
+	// better-auth calls one log() for every level; only warnings and errors are passed on
 	logger: {
-		error: (message, ...args) => log.authError(message, args.length ? args : undefined),
-		warn: (message, ...args) => log.authWarn(message, args.length ? args : undefined),
-		info: () => {},
-		debug: () => {}
+		level: 'warn',
+		log: (level, message, ...args) => {
+			const data = args.length ? args : undefined;
+			if (level === 'error') log.authError(message, data);
+			else if (level === 'warn') log.authWarn(message, data);
+		}
 	},
 	hooks: {
 		after: createAuthMiddleware(async (ctx) => {
