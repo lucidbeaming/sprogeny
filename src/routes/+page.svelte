@@ -85,10 +85,7 @@
 			>
 				SPROGENY
 			</h1>
-			<h2
-				class="mt-2 text-4xl text-white/90"
-				style="text-shadow: 0 1px 6px rgba(0,0,0,0.6);"
-			>
+			<h2 class="mt-2 text-4xl text-white/90" style="text-shadow: 0 1px 6px rgba(0,0,0,0.6);">
 				Mashup multiple Spotify&trade; playlists
 			</h2>
 

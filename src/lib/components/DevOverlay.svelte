@@ -91,126 +91,119 @@
 
 		<!-- Slider panel -->
 		<div class="sliders">
-				<div class="slider-group">
-					<label for="dev-radius">Radius <span>{c_radius.toFixed(1)}</span></label>
-					<input id="dev-radius" type="range" min="3" max="30" step="0.5" bind:value={c_radius} />
-				</div>
-				<div class="slider-group">
-					<label for="dev-planeHeight">Plane Height <span>{c_planeHeight.toFixed(1)}</span></label>
-					<input
-						id="dev-planeHeight"
-						type="range"
-						min="0.5"
-						max="6"
-						step="0.1"
-						bind:value={c_planeHeight}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-rotSpeed">Rotation Speed <span>{c_rotSpeed.toFixed(5)}</span></label>
-					<input
-						id="dev-rotSpeed"
-						type="range"
-						min="0"
-						max="0.003"
-						step="0.0001"
-						bind:value={c_rotSpeed}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-spread">Spread <span>{c_spread.toFixed(1)}</span></label>
-					<input id="dev-spread" type="range" min="0" max="15" step="0.5" bind:value={c_spread} />
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineMaxDist">Line Max Dist <span>{c_lineMaxDist.toFixed(1)}</span></label>
-					<input
-						id="dev-lineMaxDist"
-						type="range"
-						min="1"
-						max="20"
-						step="0.5"
-						bind:value={c_lineMaxDist}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineChance">Line Chance <span>{c_lineChance.toFixed(3)}</span></label>
-					<input
-						id="dev-lineChance"
-						type="range"
-						min="0"
-						max="0.2"
-						step="0.005"
-						bind:value={c_lineChance}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineLifetime">Line Lifetime <span>{c_lineLifetime}</span></label>
-					<input
-						id="dev-lineLifetime"
-						type="range"
-						min="10"
-						max="300"
-						step="5"
-						bind:value={c_lineLifetime}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineWaveAmp">Wave Amp <span>{c_lineWaveAmp.toFixed(2)}</span></label>
-					<input
-						id="dev-lineWaveAmp"
-						type="range"
-						min="0"
-						max="1"
-						step="0.01"
-						bind:value={c_lineWaveAmp}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineWaveFreq">Wave Freq <span>{c_lineWaveFreq.toFixed(1)}</span></label>
-					<input
-						id="dev-lineWaveFreq"
-						type="range"
-						min="0"
-						max="10"
-						step="0.5"
-						bind:value={c_lineWaveFreq}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineArcBulge">Arc Bulge <span>{c_lineArcBulge.toFixed(2)}</span></label>
-					<input
-						id="dev-lineArcBulge"
-						type="range"
-						min="0"
-						max="3"
-						step="0.05"
-						bind:value={c_lineArcBulge}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineThickness"
-						>Line Thickness <span>{c_lineThickness.toFixed(3)}</span></label
-					>
-					<input
-						id="dev-lineThickness"
-						type="range"
-						min="0.005"
-						max="0.2"
-						step="0.005"
-						bind:value={c_lineThickness}
-					/>
-				</div>
-				<div class="slider-group">
-					<label for="dev-lineGlow">Line Glow <span>{c_lineGlow.toFixed(2)}</span></label>
-					<input
-						id="dev-lineGlow"
-						type="range"
-						min="0"
-						max="1"
-						step="0.05"
-						bind:value={c_lineGlow}
-					/>
-				</div>
+			<div class="slider-group">
+				<label for="dev-radius">Radius <span>{c_radius.toFixed(1)}</span></label>
+				<input id="dev-radius" type="range" min="3" max="30" step="0.5" bind:value={c_radius} />
+			</div>
+			<div class="slider-group">
+				<label for="dev-planeHeight">Plane Height <span>{c_planeHeight.toFixed(1)}</span></label>
+				<input
+					id="dev-planeHeight"
+					type="range"
+					min="0.5"
+					max="6"
+					step="0.1"
+					bind:value={c_planeHeight}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-rotSpeed">Rotation Speed <span>{c_rotSpeed.toFixed(5)}</span></label>
+				<input
+					id="dev-rotSpeed"
+					type="range"
+					min="0"
+					max="0.003"
+					step="0.0001"
+					bind:value={c_rotSpeed}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-spread">Spread <span>{c_spread.toFixed(1)}</span></label>
+				<input id="dev-spread" type="range" min="0" max="15" step="0.5" bind:value={c_spread} />
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineMaxDist">Line Max Dist <span>{c_lineMaxDist.toFixed(1)}</span></label>
+				<input
+					id="dev-lineMaxDist"
+					type="range"
+					min="1"
+					max="20"
+					step="0.5"
+					bind:value={c_lineMaxDist}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineChance">Line Chance <span>{c_lineChance.toFixed(3)}</span></label>
+				<input
+					id="dev-lineChance"
+					type="range"
+					min="0"
+					max="0.2"
+					step="0.005"
+					bind:value={c_lineChance}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineLifetime">Line Lifetime <span>{c_lineLifetime}</span></label>
+				<input
+					id="dev-lineLifetime"
+					type="range"
+					min="10"
+					max="300"
+					step="5"
+					bind:value={c_lineLifetime}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineWaveAmp">Wave Amp <span>{c_lineWaveAmp.toFixed(2)}</span></label>
+				<input
+					id="dev-lineWaveAmp"
+					type="range"
+					min="0"
+					max="1"
+					step="0.01"
+					bind:value={c_lineWaveAmp}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineWaveFreq">Wave Freq <span>{c_lineWaveFreq.toFixed(1)}</span></label>
+				<input
+					id="dev-lineWaveFreq"
+					type="range"
+					min="0"
+					max="10"
+					step="0.5"
+					bind:value={c_lineWaveFreq}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineArcBulge">Arc Bulge <span>{c_lineArcBulge.toFixed(2)}</span></label>
+				<input
+					id="dev-lineArcBulge"
+					type="range"
+					min="0"
+					max="3"
+					step="0.05"
+					bind:value={c_lineArcBulge}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineThickness"
+					>Line Thickness <span>{c_lineThickness.toFixed(3)}</span></label
+				>
+				<input
+					id="dev-lineThickness"
+					type="range"
+					min="0.005"
+					max="0.2"
+					step="0.005"
+					bind:value={c_lineThickness}
+				/>
+			</div>
+			<div class="slider-group">
+				<label for="dev-lineGlow">Line Glow <span>{c_lineGlow.toFixed(2)}</span></label>
+				<input id="dev-lineGlow" type="range" min="0" max="1" step="0.05" bind:value={c_lineGlow} />
+			</div>
 
 			<button class="export-btn" onclick={exportConfig}>
 				{exportFeedback || 'Save Carousel Config'}
