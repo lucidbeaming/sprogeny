@@ -1,6 +1,19 @@
 # Sprogeny
 
-Sprogeny is a web app that combines and shuffles multiple Spotify playlists into fresh, new playlists. Sign in with Spotify, select your playlists, adjust weights, and generate blended playlists without manually dragging tracks around.
+Sprogeny is a web app that combines and shuffles multiple Spotify playlists into fresh, new playlists. Sign in with Spotify, select your playlists, adjust weights, and generate blended playlists without manually dragging tracks around. This is the code behind [sprogeny.com](https://sprogeny.com).
+
+![The Sprogeny home page: the title over a wall of album covers, with the tagline "Mashup multiple Spotify playlists"](static/images/ui/sprogenypreview.jpg)
+
+> [!NOTE]
+> **sprogeny.com is a proof of concept for a public service, with restricted access.** Like any individual developer's Spotify app, it runs in Spotify's Development Mode: at most **5 users, each added by hand**, with Spotify Premium on the owner's account. Open public access (Extended Quota) is only for organizations whose existing service has at least 250,000 monthly active users and that pass partner vetting. The app can show visitors who aren't on the list a simulated demo instead (`SIMULATIONMODE`).
+>
+> Each signed-in user works with their **own** playlists, or public playlists added by link. Spotify's February 2026 changes removed browsing another user's playlists for Development Mode apps.
+
+To run your own copy, create a Spotify app and add yourself (and up to 4 others) under **User Management** in its dashboard.
+
+## Earlier Flask prototype
+
+Versions before 2.0.0 were a small Flask app: enter a Spotify username, pick one of their public playlists, and get up to three shuffled "offspring" playlists. It predates Spotify's February 2026 API changes and no longer works against the current API. Its code is kept under the [`flask-legacy`](https://github.com/lucidbeaming/sprogeny/tree/flask-legacy) tag, and [v1.0.0](https://github.com/lucidbeaming/sprogeny/releases/tag/v1.0.0) is its last release.
 
 ## Tech Stack
 
@@ -12,15 +25,17 @@ Sprogeny is a web app that combines and shuffles multiple Spotify playlists into
 
 ## Prerequisites
 
-- Node.js
+- Node.js 22 (or 20.6+, which `ecosystem.config.cjs` needs for `--env-file`)
 - Docker (for PostgreSQL)
-- A [Spotify Developer](https://developer.spotify.com) application with a redirect URI pointing to your auth callback
+- A [Spotify Developer](https://developer.spotify.com/dashboard) application with the redirect URI `http://127.0.0.1:9002/api/auth/callback/spotify`, and your account added under **User Management**
 
 ## Setup
 
 1. Clone the repo and install dependencies:
 
    ```sh
+   git clone https://github.com/lucidbeaming/sprogeny.git
+   cd sprogeny
    npm install
    ```
 
@@ -32,13 +47,15 @@ Sprogeny is a web app that combines and shuffles multiple Spotify playlists into
 
    Required variables:
 
-   | Variable                | Description                                         |
-   | ----------------------- | --------------------------------------------------- |
-   | `DATABASE_URL`          | PostgreSQL connection string                        |
-   | `ORIGIN`                | App origin (e.g. `http://127.0.0.1:9002`)           |
-   | `BETTER_AUTH_SECRET`    | 32+ char high-entropy secret for session encryption |
-   | `SPOTIFY_CLIENT_ID`     | From your Spotify Developer app                     |
-   | `SPOTIFY_CLIENT_SECRET` | From your Spotify Developer app                     |
+   | Variable                | Description                                                           |
+   | ----------------------- | --------------------------------------------------------------------- |
+   | `DATABASE_URL`          | PostgreSQL connection string                                          |
+   | `ORIGIN`                | App origin (e.g. `http://127.0.0.1:9002`)                             |
+   | `BETTER_AUTH_SECRET`    | 32+ char high-entropy secret for session encryption                   |
+   | `SPOTIFY_CLIENT_ID`     | From your Spotify Developer app                                       |
+   | `SPOTIFY_CLIENT_SECRET` | From your Spotify Developer app                                       |
+   | `SIMULATIONMODE`        | `true` shows signed-out visitors a simulated demo; read at build time |
+   | `POSTGRES_PASSWORD`     | Password for the Docker database; must match `DATABASE_URL`           |
 
 3. Start the database and push the schema:
 
@@ -158,3 +175,12 @@ The checks can't judge what a cover shows, so look over any new covers before me
 ## Credits
 
 The album covers are `front-500` thumbnails from the [Cover Art Archive](https://coverartarchive.org/), a joint project of [MusicBrainz](https://musicbrainz.org/) and the [Internet Archive](https://archive.org/); the candidate albums come from [Wikidata](https://www.wikidata.org/). The covers remain the property of their artists, labels or designers. They're used as decoration only, and the site credits them on its Terms of Use and FAQ pages.
+
+## Related projects
+
+- [drum-loop-browser](https://github.com/lucidbeaming/drum-loop-browser): browse, preview, curate and sequence a library of MIDI drum loops
+- [vid2midi](https://github.com/lucidbeaming/vid2midi): generates MIDI files from brightness levels in video
+
+## License
+
+The code is [MIT](LICENSE) licensed. The album covers shown on the home page aren't part of the repo or the license (see [Credits](#credits)).
