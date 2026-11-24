@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    # SIMULATIONMODE is read from $env/static/private, so it must exist at build time.
+    # SPLASH_SKIP leaves out the album cover download, which only the deployed site needs.
+    env:
+      SIMULATIONMODE: 'false'
+      SPLASH_SKIP: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run lint
+      - run: npm run build
