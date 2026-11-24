@@ -1,0 +1,1290 @@
+[
+	{
+		"release": "f5e7ddad-e38e-4621-9173-6bad2f126c33",
+		"releaseGroup": "e2621417-9236-36b4-9f9e-376c416dc4b0",
+		"artist": "2Pac",
+		"title": "All Eyez on Me",
+		"year": 1996,
+		"genre": "gangsta rap"
+	},
+	{
+		"release": "1740b148-36cd-4ac4-81ab-3150a4b9b4f4",
+		"releaseGroup": "f624ead2-e4ba-4e52-bea5-4362b1c67b14",
+		"artist": "50 Cent",
+		"title": "Get Rich or Die Tryin’",
+		"year": 2003,
+		"genre": "East Coast hip-hop"
+	},
+	{
+		"release": "8d4a3302-79f2-4525-9f44-6e92632c6566",
+		"releaseGroup": "9077617d-b73f-4498-b415-175d5b843790",
+		"artist": "ABBA",
+		"title": "Voyage",
+		"year": 2021,
+		"genre": "pop music"
+	},
+	{
+		"release": "a5985d9e-d38f-4625-9639-d6790d98a0d4",
+		"releaseGroup": "d3bc1a64-7561-3787-b680-0003aa50f8f1",
+		"artist": "AC/DC",
+		"title": "Back in Black",
+		"year": 1980,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "70c6a7dd-9f01-428a-a89e-ce843bcf9432",
+		"releaseGroup": "e4174758-d333-4a8e-a31f-dd0edd51518e",
+		"artist": "Adele",
+		"title": "21",
+		"year": 2011,
+		"genre": "pop music"
+	},
+	{
+		"release": "5858daf4-8170-4769-ab86-a764c29481cc",
+		"releaseGroup": "8a58cc1a-be0d-3b1b-8d0d-aa8f467a59da",
+		"artist": "Aerosmith",
+		"title": "Aerosmith",
+		"year": 1973,
+		"genre": "hard rock"
+	},
+	{
+		"release": "fbf0a5ee-f9ef-3077-a38a-f990a1b9c8eb",
+		"releaseGroup": "ee3d18ed-d6a8-37c7-a964-41bbdb6d59f1",
+		"artist": "Alanis Morissette",
+		"title": "Jagged Little Pill",
+		"year": 1995,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "47f3efa5-137c-40e8-ab1b-42d57f5cfbbf",
+		"releaseGroup": "92d8f0c4-8c64-3bee-bee1-812a70e77efa",
+		"artist": "Alice in Chains",
+		"title": "Dirt",
+		"year": 1992,
+		"genre": "grunge"
+	},
+	{
+		"release": "0dfd2d0a-371b-4441-8cdc-04b16ba25af0",
+		"releaseGroup": "6eac2e57-ee50-36f8-b0c4-c4c847a2c098",
+		"artist": "Amy Winehouse",
+		"title": "Back to Black",
+		"year": 2006,
+		"genre": "rhythm and blues"
+	},
+	{
+		"release": "26cdc327-38f2-4200-b5dc-f2fa0e13fcfe",
+		"releaseGroup": "05affa96-5959-32da-8d75-1c9eb985ca59",
+		"artist": "Arcade Fire",
+		"title": "Funeral",
+		"year": 2004,
+		"genre": "baroque pop"
+	},
+	{
+		"release": "5a430edc-857f-4af6-a31b-8523d690c49c",
+		"releaseGroup": "a348ba2f-f8b3-4686-b928-e63d8d94d543",
+		"artist": "Arctic Monkeys",
+		"title": "AM",
+		"year": 2013,
+		"genre": "indie rock"
+	},
+	{
+		"release": "029bb5e7-f051-4a0f-8c57-a5b89d914300",
+		"releaseGroup": "58afd5f5-a3cb-43c4-a0dc-fd15fbfe33bf",
+		"artist": "Ariana Grande",
+		"title": "Sweetener",
+		"year": 2018,
+		"genre": "pop music"
+	},
+	{
+		"release": "37e4a79b-723f-4501-94aa-775c609b7fdf",
+		"releaseGroup": "fe4373ed-5e89-46b3-b4c0-31433ce217df",
+		"artist": "Avenged Sevenfold",
+		"title": "Nightmare",
+		"year": 2010,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "0f20a1b3-b812-4776-b66c-dea89bc4f0b7",
+		"releaseGroup": "4ddf87cb-29c0-42ef-bb64-c57d617a8b4a",
+		"artist": "Avril Lavigne",
+		"title": "Goodbye Lullaby",
+		"year": 2011,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "9db99a93-9326-4caf-8793-6464418fe114",
+		"releaseGroup": "4b50fad1-0e27-3502-8874-7d3e42477eaf",
+		"artist": "Basshunter",
+		"title": "LOL <(^^,)>",
+		"year": 2006,
+		"genre": "Eurodance"
+	},
+	{
+		"release": "a266d96f-a0a0-401d-ab06-be8a7d263f26",
+		"releaseGroup": "6f8e8119-de1b-39f0-85ca-b5252cb9211d",
+		"artist": "Beyoncé",
+		"title": "I Am… Sasha Fierce",
+		"year": 2008,
+		"genre": "rhythm and blues"
+	},
+	{
+		"release": "3597fbd9-0da3-4540-8266-823d3c5eea8f",
+		"releaseGroup": "72375978-a9a1-4254-b957-85565c716b7e",
+		"artist": "Billie Eilish",
+		"title": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?",
+		"year": 2019,
+		"genre": "electropop"
+	},
+	{
+		"release": "bc9c06da-0be8-4e01-93a3-9a41261a8de3",
+		"releaseGroup": "6891a28c-5865-36e2-9e5f-c9fac1d3595f",
+		"artist": "Björk",
+		"title": "Debut",
+		"year": 1993,
+		"genre": "trip hop"
+	},
+	{
+		"release": "069dc077-63e4-3ee8-903b-0dd53cf555bf",
+		"releaseGroup": "826c9743-a3f0-3479-bf06-8df2e140ef1d",
+		"artist": "Black Sabbath",
+		"title": "Black Sabbath",
+		"year": 1970,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "22157594-c26d-4a9d-a56c-c52f60c741b8",
+		"releaseGroup": "cd367c59-eb86-384b-bbc7-62f6d2d677b9",
+		"artist": "blink‐182",
+		"title": "Enema of the State",
+		"year": 1999,
+		"genre": "pop-punk"
+	},
+	{
+		"release": "32716c59-9347-4a32-aadb-ac46bdf27ead",
+		"releaseGroup": "e7affd78-d157-4772-a468-675fa4309c61",
+		"artist": "Blur",
+		"title": "Modern Life Is Rubbish",
+		"year": 1993,
+		"genre": "Britpop"
+	},
+	{
+		"release": "beb8751d-0aef-3b2f-89c2-4dc582b5a822",
+		"releaseGroup": "6ac612a5-e815-3fed-b341-8b3faa351df4",
+		"artist": "Bob Dylan",
+		"title": "Bob Dylan",
+		"year": 1962,
+		"genre": "folk music"
+	},
+	{
+		"release": "04625cd7-9d2c-4038-83d0-d85605e5cfb4",
+		"releaseGroup": "f07346e6-c889-33b8-83c8-ad987d7b14f6",
+		"artist": "Bon Jovi",
+		"title": "Slippery When Wet",
+		"year": 1986,
+		"genre": "hard rock"
+	},
+	{
+		"release": "c3eeeb71-ddad-4654-a84a-5975f734b8f3",
+		"releaseGroup": "a7e9d7d2-3c60-472f-b2ba-829de5034179",
+		"artist": "Britney Spears",
+		"title": "Femme Fatale",
+		"year": 2011,
+		"genre": "pop music"
+	},
+	{
+		"release": "01dfa267-9c84-4411-a2da-ea27cc0eb317",
+		"releaseGroup": "3c39a076-8e52-38f2-8076-260d0672fb23",
+		"artist": "Bruce Springsteen",
+		"title": "Born in the U.S.A.",
+		"year": 1984,
+		"genre": "pop rock"
+	},
+	{
+		"release": "3d2b148e-8c0a-42b6-baae-c3ee7322a569",
+		"releaseGroup": "b3d1fbf7-dd1c-4119-a16e-58c2feb5bcb0",
+		"artist": "Bruno Mars",
+		"title": "Doo-Wops & Hooligans",
+		"year": 2010,
+		"genre": "pop music"
+	},
+	{
+		"release": "1ce9177c-62a0-4403-a7ee-7359026fcbf6",
+		"releaseGroup": "c2841928-501f-37f7-a59e-cb1629471258",
+		"artist": "Burzum",
+		"title": "Filosofem",
+		"year": 1996,
+		"genre": "black metal"
+	},
+	{
+		"release": "4b4698bd-25c7-4635-96e2-178ae2d5cd3b",
+		"releaseGroup": "e0fdb431-0109-420d-8a37-f99eaeb4d671",
+		"artist": "Charli xcx",
+		"title": "BRAT",
+		"year": 2024,
+		"genre": "electropop"
+	},
+	{
+		"release": "0a409e86-dd69-4083-a49c-8278a65c5081",
+		"releaseGroup": "6f47450a-6f77-3af2-80bb-4e7012c07180",
+		"artist": "Christina Aguilera",
+		"title": "Christina Aguilera",
+		"year": 1999,
+		"genre": "pop music"
+	},
+	{
+		"release": "1cb025b5-b608-419f-b00f-0d70e0fa5434",
+		"releaseGroup": "a1084754-8bb5-3ebc-bbd2-6a27d48e798a",
+		"artist": "Coldplay",
+		"title": "Viva la Vida or Death and All His Friends",
+		"year": 2008,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "11e3cf97-aef7-4a5f-a6de-9af7965522ec",
+		"releaseGroup": "bbd66e31-ac27-3432-81a7-0d4b4b4c5de5",
+		"artist": "Cream",
+		"title": "Disraeli Gears",
+		"year": 1967,
+		"genre": "blues rock"
+	},
+	{
+		"release": "158f94bf-d77f-4055-afa4-8fc7e0b2a004",
+		"releaseGroup": "aa997ea0-2936-40bd-884d-3af8a0e064dc",
+		"artist": "Daft Punk",
+		"title": "Random Access Memories",
+		"year": 2013,
+		"genre": "electronic music"
+	},
+	{
+		"release": "e7523eec-af9a-46fe-aa20-620a02f1578b",
+		"releaseGroup": "6c9ae3dd-32ad-472c-96be-69d0a3536261",
+		"artist": "David Bowie",
+		"title": "The Rise and Fall of Ziggy Stardust and the Spiders From Mars",
+		"year": 1972,
+		"genre": "rock music"
+	},
+	{
+		"release": "eeb5d906-ccc4-41a1-9aa0-bc119f1526c1",
+		"releaseGroup": "8a9b75f8-9730-3726-91fb-46283039da1d",
+		"artist": "David Gilmour",
+		"title": "About Face",
+		"year": 1984,
+		"genre": "hard rock"
+	},
+	{
+		"release": "463e3e67-1034-454a-ba6e-219c0b8a8fcb",
+		"releaseGroup": "bdb083d6-be5e-32b3-97df-3d899a8ff858",
+		"artist": "Deep Purple",
+		"title": "Shades of Deep Purple",
+		"year": 1968,
+		"genre": "hard rock"
+	},
+	{
+		"release": "aa6ba8f5-651e-4a36-892d-bba559e0aea9",
+		"releaseGroup": "12fa3845-7c62-36e5-a8da-8be137155a72",
+		"artist": "Def Leppard",
+		"title": "Hysteria",
+		"year": 1987,
+		"genre": "glam metal"
+	},
+	{
+		"release": "e73858bd-d574-4fd1-9ed9-d9ca945d3954",
+		"releaseGroup": "3f5ac466-62df-44bd-9c50-c41b5f6c03f1",
+		"artist": "Demi Lovato",
+		"title": "Here We Go Again",
+		"year": 2009,
+		"genre": "pop rock"
+	},
+	{
+		"release": "5454efa9-445a-4b73-8d16-e9fdbf022119",
+		"releaseGroup": "71f1482e-e63f-3b2c-811b-939f62708f2a",
+		"artist": "Depeche Mode",
+		"title": "Violator",
+		"year": 1990,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "42147fee-c976-45ab-bff6-70f603221eb2",
+		"releaseGroup": "b02f651e-32a1-30ae-bc23-070b59170278",
+		"artist": "Dire Straits",
+		"title": "Brothers in Arms",
+		"year": 1985,
+		"genre": "rock music"
+	},
+	{
+		"release": "9169c0f8-641e-38b5-b76a-9815b4daf68e",
+		"releaseGroup": "ad444843-7160-33d7-b0c9-fc99f2c14a99",
+		"artist": "Dr. Dre",
+		"title": "The Chronic",
+		"year": 1992,
+		"genre": "gangsta rap"
+	},
+	{
+		"release": "4b5a4d0e-1268-4ed5-8b48-6d0740053813",
+		"releaseGroup": "ee30c026-b4f4-3e2a-94cf-7e586f1ccae0",
+		"artist": "Dream Theater",
+		"title": "Images and Words",
+		"year": 1992,
+		"genre": "progressive metal"
+	},
+	{
+		"release": "315bbc48-dea9-463c-bfa9-a6ccab78b990",
+		"releaseGroup": "aa366795-92d7-4d67-91fa-6741f82a4858",
+		"artist": "Dua Lipa",
+		"title": "Future Nostalgia",
+		"year": 2020,
+		"genre": "pop music"
+	},
+	{
+		"release": "c6239502-0471-46a4-987b-dadf8673715b",
+		"releaseGroup": "836f349a-0434-3e8b-a0bc-261f77a9f99c",
+		"artist": "Eagles",
+		"title": "Hotel California",
+		"year": 1976,
+		"genre": "rock music"
+	},
+	{
+		"release": "4645db40-4146-499b-bc1c-66294dde3ed3",
+		"releaseGroup": "e05f9927-e24b-41c5-928d-d0e008a12444",
+		"artist": "Ed Sheeran",
+		"title": "÷",
+		"year": 2017,
+		"genre": "pop music"
+	},
+	{
+		"release": "95b171d0-f523-4878-a1de-7025fbb7c99d",
+		"releaseGroup": "80df0f1b-4ce7-348a-aa1b-0d31ebff111a",
+		"artist": "Elton John",
+		"title": "Goodbye Yellow Brick Road",
+		"year": 1973,
+		"genre": "rock music"
+	},
+	{
+		"release": "f0bfdadc-e05f-46b6-8e4d-4bed28e559e8",
+		"releaseGroup": "e9585ed4-d148-3711-bbee-55a97b58325a",
+		"artist": "Eminem",
+		"title": "The Eminem Show",
+		"year": 2002,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "00802578-3919-4410-bbee-28e300a0ad3a",
+		"releaseGroup": "a2cb6793-9f04-35d9-8cb8-03c6fa7ae240",
+		"artist": "Enya",
+		"title": "Watermark",
+		"year": 1988,
+		"genre": "new age music"
+	},
+	{
+		"release": "168c759c-9ba8-4d50-a2a0-729e688cb267",
+		"releaseGroup": "2187d248-1a3b-35d0-a4ec-bead586ff547",
+		"artist": "Evanescence",
+		"title": "Fallen",
+		"year": 2003,
+		"genre": "nu metal"
+	},
+	{
+		"release": "f99007df-d968-4f34-9ef9-aa16003b0541",
+		"releaseGroup": "5a4599e9-7ec3-3346-8997-5d5f33377c78",
+		"artist": "Fergie",
+		"title": "The Dutchess",
+		"year": 2006,
+		"genre": "rhythm and blues"
+	},
+	{
+		"release": "2aaa32d6-9c4f-45e1-a2d1-9233addb354f",
+		"releaseGroup": "416bb5e5-c7d1-3977-8fd7-7c9daf6c2be6",
+		"artist": "Fleetwood Mac",
+		"title": "Rumours",
+		"year": 1977,
+		"genre": "soft rock"
+	},
+	{
+		"release": "d6591261-daaa-4bb2-81b6-544e499da727",
+		"releaseGroup": "440c9ce8-8ce4-3103-a745-0b385ae70a34",
+		"artist": "Foo Fighters",
+		"title": "Foo Fighters",
+		"year": 1995,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "c5a131a3-1478-4d4c-af8d-0afa977c1337",
+		"releaseGroup": "3f974fbd-9db8-3dff-9466-b9ae6fd9146c",
+		"artist": "Frank Zappa",
+		"title": "Hot Rats",
+		"year": 1969,
+		"genre": "jazz fusion"
+	},
+	{
+		"release": "947a99b9-d7f1-45c8-b26f-f36ec853f773",
+		"releaseGroup": "e179dc23-7db6-3506-a01c-ae70210134f0",
+		"artist": "Freddie Mercury",
+		"title": "Mr. Bad Guy",
+		"year": 1985,
+		"genre": "pop rock"
+	},
+	{
+		"release": "d7876fcb-c629-4b17-b973-de9824279360",
+		"releaseGroup": "1fadec3d-7451-32e8-9194-ad7e5312cb9b",
+		"artist": "Genesis",
+		"title": "Selling England by the Pound",
+		"year": 1973,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "2968b394-7ca8-3b6a-a3ec-a0239adb01c9",
+		"releaseGroup": "f959a46a-a136-3134-9412-6572b23fad95",
+		"artist": "Gorillaz",
+		"title": "Demon Days",
+		"year": 2005,
+		"genre": "trip hop"
+	},
+	{
+		"release": "dd7cbde9-bffc-467f-8a39-bda4ea2d0633",
+		"releaseGroup": "de9bf827-a9b0-348b-a7c9-556c03c3fb07",
+		"artist": "Green Day",
+		"title": "American Idiot",
+		"year": 2004,
+		"genre": "grunge"
+	},
+	{
+		"release": "1674749c-e197-47ab-a487-efda313f8ef7",
+		"releaseGroup": "a0b94d0a-210b-4b15-bd1d-93be2196c14a",
+		"artist": "Guns N' Roses",
+		"title": "Appetite for Destruction",
+		"year": 1987,
+		"genre": "hard rock"
+	},
+	{
+		"release": "48ddbeeb-4d78-4b57-a1f8-d0c88050fb2c",
+		"releaseGroup": "3873f5a4-e3e2-3e88-ae7e-c2ea5de1a5ba",
+		"artist": "Gwen Stefani",
+		"title": "Love. Angel. Music. Baby.",
+		"year": 2004,
+		"genre": "dance-pop"
+	},
+	{
+		"release": "5c8a772d-fb0a-46ab-a5d8-6317546b727a",
+		"releaseGroup": "b9990da8-7953-4e64-aea5-065ca9cd3cb7",
+		"artist": "Harry Styles",
+		"title": "Fine Line",
+		"year": 2019,
+		"genre": "psychedelic pop"
+	},
+	{
+		"release": "22d79f1c-4593-41bf-a3e7-2c83ec0146a7",
+		"releaseGroup": "a186ae54-41a1-4b46-861c-c0d80c154556",
+		"artist": "Imagine Dragons",
+		"title": "Smoke + Mirrors",
+		"year": 2015,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "cf4a2c5c-5814-4b14-a66a-20176f185679",
+		"releaseGroup": "4ebfe175-e7ed-34cd-8e91-67c7e4a53579",
+		"artist": "Iron Maiden",
+		"title": "The Number of the Beast",
+		"year": 1982,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "1d33339e-6da1-40bd-b553-141cbe1e90bd",
+		"releaseGroup": "3055cd07-9b9d-34ed-b227-942ba6977174",
+		"artist": "Jean Michel Jarre",
+		"title": "Oxygène",
+		"year": 1976,
+		"genre": "electronic music"
+	},
+	{
+		"release": "ad600fd6-5979-4029-a842-a2a9b33732a7",
+		"releaseGroup": "ea29c347-696f-3165-986d-7bad1394b178",
+		"artist": "Jeff Buckley",
+		"title": "Grace",
+		"year": 1994,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "e68c0154-8319-4962-848c-3645f6bb9aa8",
+		"releaseGroup": "b49f2176-899b-3262-9b08-0a2aa0f5fbd6",
+		"artist": "Jennifer Lopez",
+		"title": "On the 6",
+		"year": 1999,
+		"genre": "pop music"
+	},
+	{
+		"release": "af039dc2-347f-39fc-b34c-4365395546bc",
+		"releaseGroup": "13081627-5418-300c-af24-f65875ab61b7",
+		"artist": "Jethro Tull",
+		"title": "Thick as a Brick",
+		"year": 1972,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "0d09169a-f017-49eb-ac3d-2fa2ce7844a4",
+		"releaseGroup": "790ec782-7344-366c-af67-4a427bcaf991",
+		"artist": "John Lennon & Yoko Ono",
+		"title": "Double Fantasy",
+		"year": 1980,
+		"genre": "rock music"
+	},
+	{
+		"release": "caf17f1e-56b9-4203-9495-be162e7879ed",
+		"releaseGroup": "852f9715-24b3-37d5-b8a5-456f5e19b41e",
+		"artist": "Joy Division",
+		"title": "Closer",
+		"year": 1980,
+		"genre": "gothic rock"
+	},
+	{
+		"release": "5589cff8-9c9f-40d8-8536-70f39e7e531a",
+		"releaseGroup": "384f9bb3-6437-386f-8f1e-ff7c1b772455",
+		"artist": "Judas Priest",
+		"title": "Painkiller",
+		"year": 1990,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "119c3af8-f649-491d-a219-ea8df4485106",
+		"releaseGroup": "eb68ecd6-fb1e-483a-9cda-b595fb4664a7",
+		"artist": "Justin Bieber",
+		"title": "My World 2.0",
+		"year": 2010,
+		"genre": "pop music"
+	},
+	{
+		"release": "1948bfa7-797b-4816-a4f0-f85221fe053b",
+		"releaseGroup": "00de8e96-b902-3d80-b980-1298937b0b2a",
+		"artist": "Justin Timberlake",
+		"title": "FutureSex/LoveSounds",
+		"year": 2006,
+		"genre": "pop music"
+	},
+	{
+		"release": "9505501e-f98d-4975-9775-63a671f713e1",
+		"releaseGroup": "1c1b50ec-828b-3d7c-9b1b-54cb1fe97d55",
+		"artist": "Kanye West",
+		"title": "808s & Heartbreak",
+		"year": 2008,
+		"genre": "pop music"
+	},
+	{
+		"release": "2a666025-eb7c-3cc2-bd76-4fbd80487395",
+		"releaseGroup": "e6f683c9-fc85-412c-a352-d6e411fc2603",
+		"artist": "Katy Perry",
+		"title": "Teenage Dream",
+		"year": 2010,
+		"genre": "electronic music"
+	},
+	{
+		"release": "7b70d033-0419-4453-9d05-34b3aa802408",
+		"releaseGroup": "ff7b68e9-ba2f-4a11-8004-52f1f358856a",
+		"artist": "Ke$ha",
+		"title": "Animal",
+		"year": 2010,
+		"genre": "electropop"
+	},
+	{
+		"release": "483b3418-cc54-4ec4-82b6-66de548ec399",
+		"releaseGroup": "f1d0083d-9bc4-3046-a41e-790cee0ec999",
+		"artist": "Kelly Clarkson",
+		"title": "My December",
+		"year": 2007,
+		"genre": "pop music"
+	},
+	{
+		"release": "d86cb2dd-39f5-4e51-a886-c165a63df493",
+		"releaseGroup": "d9103c72-3807-4378-9ce7-b6f3e8fdd547",
+		"artist": "Kendrick Lamar",
+		"title": "To Pimp a Butterfly",
+		"year": 2015,
+		"genre": "conscious hip-hop"
+	},
+	{
+		"release": "3b727dc0-49a5-4bd1-8ff3-d070995e0662",
+		"releaseGroup": "a50636b5-5233-3329-a7f3-dba3d0e00ef7",
+		"artist": "King Crimson",
+		"title": "In the Court of the Crimson King",
+		"year": 1969,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "33172278-af65-4fbe-bbe3-24b2864f20c2",
+		"releaseGroup": "46f879d8-d3a6-375b-814d-0c548cbedbc0",
+		"artist": "KISS",
+		"title": "Dynasty",
+		"year": 1979,
+		"genre": "rock music"
+	},
+	{
+		"release": "91e9efc5-c39e-45cc-a646-cfb7b81ebde1",
+		"releaseGroup": "aa08a002-2777-39cf-a554-e0988fc68030",
+		"artist": "Korn",
+		"title": "Korn",
+		"year": 1994,
+		"genre": "nu metal"
+	},
+	{
+		"release": "c5bb1bb9-af35-4bd5-83c2-4a446d1ecd9b",
+		"releaseGroup": "d691b0b0-33c2-393a-bc63-dbb681ee662c",
+		"artist": "Kylie",
+		"title": "Fever",
+		"year": 2001,
+		"genre": "house music"
+	},
+	{
+		"release": "13fa7272-0679-4769-bdc1-2587b6122118",
+		"releaseGroup": "128ed442-1e2e-35d3-954f-cdbce2a0207c",
+		"artist": "Kylie Minogue",
+		"title": "Light Years",
+		"year": 2000,
+		"genre": "house music"
+	},
+	{
+		"release": "c9ec838a-4925-4fad-b98b-c9b9747c3590",
+		"releaseGroup": "e5495719-b3ad-3eea-a533-fb70af43c23d",
+		"artist": "Lady Gaga",
+		"title": "The Fame",
+		"year": 2008,
+		"genre": "dance-pop"
+	},
+	{
+		"release": "821b5fd1-8fdd-4976-8258-90c661cc6423",
+		"releaseGroup": "4b16a1bc-8644-48ae-9b3e-8ae36aa30cfc",
+		"artist": "Lana Del Rey",
+		"title": "Born to Die",
+		"year": 2012,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "15ad9398-dfc7-46d6-aec2-618d4efb62e8",
+		"releaseGroup": "0f18ec88-aa87-38a9-8a65-f03d81763560",
+		"artist": "Led Zeppelin",
+		"title": "Led Zeppelin",
+		"year": 1969,
+		"genre": "hard rock"
+	},
+	{
+		"release": "cbcb9ca8-d4c1-431b-9279-9a917477c99a",
+		"releaseGroup": "b5b4bb4b-8ba5-3acf-88cb-4cae2699d8da",
+		"artist": "Linkin Park",
+		"title": "Hybrid Theory",
+		"year": 2000,
+		"genre": "nu metal"
+	},
+	{
+		"release": "ac45ebb5-4787-4dd5-8934-e878148cf6de",
+		"releaseGroup": "72744301-c9a1-3a32-901e-44f666e07796",
+		"artist": "Lordi",
+		"title": "Deadache",
+		"year": 2008,
+		"genre": "hard rock"
+	},
+	{
+		"release": "33679b95-54d6-4960-8179-663575053a48",
+		"releaseGroup": "6c8345df-f822-33af-b64a-eff2e46941b9",
+		"artist": "Lou Reed",
+		"title": "Transformer",
+		"year": 1972,
+		"genre": "glam rock"
+	},
+	{
+		"release": "1a06799c-3124-3ed4-afaa-dc3455cbae12",
+		"releaseGroup": "8160f309-f93b-31f3-86da-248aeff39c1f",
+		"artist": "Madonna",
+		"title": "Hard Candy",
+		"year": 2008,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "698fa1f0-6e8c-42a0-a1dd-9558d0d521ee",
+		"releaseGroup": "67cd8314-bdfc-3023-b4d0-46a0b06ff819",
+		"artist": "Mariah Carey",
+		"title": "Mariah Carey",
+		"year": 1990,
+		"genre": "pop music"
+	},
+	{
+		"release": "1050cbd4-0f9a-4c09-989e-1dfbd6c14127",
+		"releaseGroup": "6cb17389-101a-3f0a-8864-bea548465406",
+		"artist": "Marilyn Manson",
+		"title": "Antichrist Superstar",
+		"year": 1996,
+		"genre": "alternative metal"
+	},
+	{
+		"release": "03f96a62-44ba-4d84-b4b0-a1718e1aedef",
+		"releaseGroup": "0a8d9c8b-1447-43de-bcd0-4da5e0814a55",
+		"artist": "Maroon 5",
+		"title": "It Won’t Be Soon Before Long",
+		"year": 2007,
+		"genre": "funk"
+	},
+	{
+		"release": "ba91f9e2-2391-4bbd-9114-c9eff138fd98",
+		"releaseGroup": "c1fa4d2c-ec62-37d5-b01d-6df7f8fd2c90",
+		"artist": "Marvin Gaye",
+		"title": "What’s Going On",
+		"year": 1971,
+		"genre": "soul"
+	},
+	{
+		"release": "85d1cc7a-c674-46d7-9fba-4514b5790a85",
+		"releaseGroup": "982634e8-cd4d-3f7c-9f90-9b6dea315589",
+		"artist": "Mayhem",
+		"title": "De Mysteriis Dom Sathanas",
+		"year": 1994,
+		"genre": "black metal"
+	},
+	{
+		"release": "764f3188-8652-4c59-8934-1227f18b251f",
+		"releaseGroup": "19e7c9f3-7c4c-3a56-ba50-4156b39f76ca",
+		"artist": "Megadeth",
+		"title": "Rust in Peace",
+		"year": 1990,
+		"genre": "thrash metal"
+	},
+	{
+		"release": "2b4002f3-1c21-4ff2-bebf-f4c98f1773c1",
+		"releaseGroup": "f44f4f73-a714-31a1-a4b8-bfcaaf311f50",
+		"artist": "Metallica",
+		"title": "Kill ’Em All",
+		"year": 1983,
+		"genre": "thrash metal"
+	},
+	{
+		"release": "0881a2b7-2be3-4dfd-94f0-b186069802bd",
+		"releaseGroup": "f32fab67-77dd-3937-addc-9062e28e4c37",
+		"artist": "Michael Jackson",
+		"title": "Thriller",
+		"year": 1982,
+		"genre": "rock music"
+	},
+	{
+		"release": "aeeed9a5-9c8a-4771-b16c-ac466a952d2f",
+		"releaseGroup": "d3f057b4-7e89-3018-9f84-9835ed9b4732",
+		"artist": "Mike Oldfield",
+		"title": "Tubular Bells",
+		"year": 1973,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "49234de2-790c-46e5-b780-3cd6be79a2db",
+		"releaseGroup": "8e8a594f-2175-38c7-a871-abb68ec363e7",
+		"artist": "Miles Davis",
+		"title": "Kind of Blue",
+		"year": 1959,
+		"genre": "jazz"
+	},
+	{
+		"release": "7fb23d65-1143-4270-a9a6-5ba634def3f2",
+		"releaseGroup": "ae4a82c4-dd46-481d-a4c9-eb6a11b25832",
+		"artist": "Miley Cyrus",
+		"title": "Can’t Be Tamed",
+		"year": 2010,
+		"genre": "dance-pop"
+	},
+	{
+		"release": "1527d1e4-a502-4beb-8943-d80b4ae6dd1e",
+		"releaseGroup": "8c555763-bc95-3176-a6bb-1c0651e06b41",
+		"artist": "Modern Talking",
+		"title": "The 1st Album",
+		"year": 1985,
+		"genre": "Eurodisco"
+	},
+	{
+		"release": "53f41259-3f06-4bb3-b8e9-f100dc384ee5",
+		"releaseGroup": "43b4c679-bb92-3479-8763-501fd5173d3d",
+		"artist": "Motörhead",
+		"title": "Motörhead",
+		"year": 1977,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "18d23b8b-009e-4a16-9a81-a8d8a48cb4e4",
+		"releaseGroup": "8411a4db-e104-4e45-995f-24b2f1849437",
+		"artist": "Muse",
+		"title": "The Resistance",
+		"year": 2009,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "9108adbb-b065-408b-9f59-c1af1f4a241a",
+		"releaseGroup": "1d563513-87dc-308f-8bac-418fab4054cf",
+		"artist": "My Chemical Romance",
+		"title": "Three Cheers for Sweet Revenge",
+		"year": 2004,
+		"genre": "pop-punk"
+	},
+	{
+		"release": "f00af81c-9249-49d0-b3f5-8b6725bd1900",
+		"releaseGroup": "28298e2c-4d70-3eed-a0f5-a3280c662b3d",
+		"artist": "Nas",
+		"title": "Illmatic",
+		"year": 1994,
+		"genre": "conscious hip-hop"
+	},
+	{
+		"release": "d04cd71f-b6c9-4cd8-9af8-dd492df724e9",
+		"releaseGroup": "723dcf4d-800e-3479-87fb-ba5b9594e375",
+		"artist": "Nelly Furtado",
+		"title": "Loose",
+		"year": 2006,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "ba22f869-761c-4e17-bfa6-0cee99df4da2",
+		"releaseGroup": "c91d9596-dfa8-482d-b3ab-706e937fd3ec",
+		"artist": "Nicki Minaj",
+		"title": "Pink Friday",
+		"year": 2010,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "b1b429da-589b-410d-9904-15cd8c90894e",
+		"releaseGroup": "c12897a3-af7a-3466-8892-58af84765813",
+		"artist": "Nightwish",
+		"title": "Dark Passion Play",
+		"year": 2007,
+		"genre": "symphonic metal"
+	},
+	{
+		"release": "347666eb-86f7-488a-a427-895f6f7ac203",
+		"releaseGroup": "1b022e01-4da6-387b-8658-8678046e4cef",
+		"artist": "Nirvana",
+		"title": "Nevermind",
+		"year": 1991,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "d6f68975-dc8f-4e91-ac6f-0061b2adb325",
+		"releaseGroup": "451dca98-c118-32e1-9244-c47ca9c3c0f9",
+		"artist": "Oasis",
+		"title": "Definitely Maybe",
+		"year": 1994,
+		"genre": "Britpop"
+	},
+	{
+		"release": "0151befb-0adf-4b0c-a142-4af36c3c3cd0",
+		"releaseGroup": "2ae2e504-7116-4b4f-b632-9748bb18ccd2",
+		"artist": "Olivia Rodrigo",
+		"title": "SOUR",
+		"year": 2021,
+		"genre": "pop music"
+	},
+	{
+		"release": "9832f2bb-1b5f-4f35-bd87-0ae002f9bc1c",
+		"releaseGroup": "efba7763-a237-4bba-85e7-ba94f59f8c2c",
+		"artist": "One Direction",
+		"title": "Up All Night",
+		"year": 2011,
+		"genre": "pop music"
+	},
+	{
+		"release": "e320cb0c-dce1-39e9-a528-88a2c6fea317",
+		"releaseGroup": "1c318024-66cc-32f5-8e06-b06dc511b42c",
+		"artist": "Ozzy Osbourne",
+		"title": "Blizzard of Ozz",
+		"year": 1980,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "979e2cf7-dba3-4704-9b33-30b5d76ec09c",
+		"releaseGroup": "d8e89f6d-0c5b-3a05-a660-8c7367274d85",
+		"artist": "P!nk",
+		"title": "Funhouse",
+		"year": 2008,
+		"genre": "pop rock"
+	},
+	{
+		"release": "b7df1e16-c32a-47db-87b4-0aa5b1fae7a4",
+		"releaseGroup": "a0398241-a842-3593-83b4-a1aa1df23328",
+		"artist": "Pantera",
+		"title": "Cowboys From Hell",
+		"year": 1990,
+		"genre": "groove metal"
+	},
+	{
+		"release": "d00c8fc9-6e0f-37a1-bee8-0d5072beb9c7",
+		"releaseGroup": "cd706457-8b16-4809-a61a-cdba1b281d39",
+		"artist": "Paramore",
+		"title": "Brand New Eyes",
+		"year": 2009,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "5c5d3332-1618-39bd-930a-5ca332ce0dbc",
+		"releaseGroup": "cea5d18a-1924-3cda-bebc-38933834b25d",
+		"artist": "Pearl Jam",
+		"title": "Ten",
+		"year": 1991,
+		"genre": "grunge"
+	},
+	{
+		"release": "24824319-9bb8-3d1e-a2c5-b8b864dafd1b",
+		"releaseGroup": "f5093c06-23e3-404f-aeaa-40f72885ee3a",
+		"artist": "Pink Floyd",
+		"title": "The Dark Side of the Moon",
+		"year": 1973,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "62072bc9-3e10-4603-9fa5-80031887f75d",
+		"releaseGroup": "ac9138ce-6331-3f8d-86d7-69f13e4ab4f4",
+		"artist": "Prodigy",
+		"title": "The Fat of the Land",
+		"year": 1997,
+		"genre": "techno"
+	},
+	{
+		"release": "492511c2-bc58-4f0c-ba73-7de3befc9710",
+		"releaseGroup": "6b47c9a0-b9e1-3df9-a5e8-50a6ce0dbdbd",
+		"artist": "Queen",
+		"title": "A Night at the Opera",
+		"year": 1975,
+		"genre": "opera"
+	},
+	{
+		"release": "ab2c2726-a2c4-4f4d-a207-c1985c3f9a1b",
+		"releaseGroup": "b1392450-e666-3926-a536-22c65f834433",
+		"artist": "Radiohead",
+		"title": "OK Computer",
+		"year": 1997,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "10cf6ada-ef3f-3cd3-9a7b-bdc15db2dddf",
+		"releaseGroup": "1305859b-8937-397f-9c33-39f62eb672fb",
+		"artist": "Rage Against the Machine",
+		"title": "Rage Against the Machine",
+		"year": 1992,
+		"genre": "rap metal"
+	},
+	{
+		"release": "e19c5949-d5d0-4710-b7d2-190ede1f877c",
+		"releaseGroup": "806eb9e1-06c6-385e-bf04-f3c5e2b4a6be",
+		"artist": "Rammstein",
+		"title": "Herzeleid",
+		"year": 1995,
+		"genre": "Neue Deutsche Härte"
+	},
+	{
+		"release": "3eb0b384-30bc-46a4-a9f0-3b13a98a914c",
+		"releaseGroup": "ca5dfcc3-83fb-3eee-9061-c27296b77b2c",
+		"artist": "Red Hot Chili Peppers",
+		"title": "Californication",
+		"year": 1999,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "79d4fea0-0fbb-3722-a2e6-9830268b4342",
+		"releaseGroup": "7c6de97d-bf6a-4793-82f5-f142baed33e6",
+		"artist": "Rihanna",
+		"title": "Loud",
+		"year": 2010,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "d7ff944a-d3ac-4289-be0e-fa4f0946ec48",
+		"releaseGroup": "1cd3a513-be39-373c-b56d-54a3fed5b928",
+		"artist": "Robbie Williams",
+		"title": "Life Thru a Lens",
+		"year": 1997,
+		"genre": "Britpop"
+	},
+	{
+		"release": "30dbb929-1933-478b-9232-3fe5170d6357",
+		"releaseGroup": "961c7742-3311-32ee-beee-58ac8dbe08f4",
+		"artist": "Roger Waters",
+		"title": "The Pros and Cons of Hitch Hiking",
+		"year": 1984,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "fbd1d18d-79f3-4570-8e20-45f65beb4641",
+		"releaseGroup": "9243ac59-9390-37e1-abee-fcf31fb8035f",
+		"artist": "Rush",
+		"title": "2112",
+		"year": 1976,
+		"genre": "progressive rock"
+	},
+	{
+		"release": "2a5080bb-3da8-4c7a-b853-e60fbea6f886",
+		"releaseGroup": "c8bea388-c195-4177-bf9b-7469f6e695a1",
+		"artist": "Sabrina Carpenter",
+		"title": "Short n’ Sweet",
+		"year": 2024,
+		"genre": "pop music"
+	},
+	{
+		"release": "f78a8f46-e867-4002-a4cd-a87c95d048a6",
+		"releaseGroup": "b00edfa4-ae7a-3580-a904-85682bf6198d",
+		"artist": "Selena",
+		"title": "Dreaming of You",
+		"year": 1995,
+		"genre": "contemporary R&B"
+	},
+	{
+		"release": "fce207cf-9d7b-4e33-962a-3b11127df7aa",
+		"releaseGroup": "3309f7fa-61af-439d-a30c-910163ba1ea8",
+		"artist": "Selena Gomez",
+		"title": "Stars Dance",
+		"year": 2013,
+		"genre": "electronic music"
+	},
+	{
+		"release": "35d83c6e-925f-4e09-b78c-645297ef92e5",
+		"releaseGroup": "03e8cf63-f707-4013-bd07-638149fe09db",
+		"artist": "Selena Gomez & the Scene",
+		"title": "Kiss & Tell",
+		"year": 2009,
+		"genre": "pop rock"
+	},
+	{
+		"release": "72843115-cc3f-4bb6-acc4-5e7584fb0901",
+		"releaseGroup": "e959a4b3-6306-3c45-9df6-e7241dae9ea3",
+		"artist": "Sex Pistols",
+		"title": "Never Mind the Bollocks Here’s the Sex Pistols",
+		"year": 1977,
+		"genre": "unknown"
+	},
+	{
+		"release": "0e130196-c6b0-4abd-af2c-0b9a9b985422",
+		"releaseGroup": "daa154b8-34e9-350d-9e1a-e8626f946804",
+		"artist": "Shakira",
+		"title": "Oral Fixation, Vol. 2",
+		"year": 2005,
+		"genre": "pop music"
+	},
+	{
+		"release": "b90d1188-e63b-47d8-9ca3-e968d406d505",
+		"releaseGroup": "c39f7f80-d42f-3669-9653-230f8e922083",
+		"artist": "Simon and Garfunkel",
+		"title": "Bridge Over Troubled Water",
+		"year": 1970,
+		"genre": "folk rock"
+	},
+	{
+		"release": "df81584a-32d2-4fa1-a6dd-81bbfe46ac06",
+		"releaseGroup": "dbf1b3c0-1efb-4e5f-9fe1-4c42b144aa24",
+		"artist": "Slayer",
+		"title": "Reign in Blood",
+		"year": 1986,
+		"genre": "thrash metal"
+	},
+	{
+		"release": "9c20d207-b383-47ab-8c60-a9a2a92b8f34",
+		"releaseGroup": "aa38e6f0-e748-35c8-a8d4-04ff660e9354",
+		"artist": "Slipknot",
+		"title": "Vol. 3: (The Subliminal Verses)",
+		"year": 2004,
+		"genre": "heavy metal music"
+	},
+	{
+		"release": "ed9aaa92-21a7-418a-b4e7-1b17405fa3a8",
+		"releaseGroup": "649762c9-8785-3d9c-803d-2f0496f168e5",
+		"artist": "Snoop Doggy Dogg",
+		"title": "Doggystyle",
+		"year": 1993,
+		"genre": "West Coast hip-hop"
+	},
+	{
+		"release": "8fc75fbf-0651-4f13-8624-492bc84d2208",
+		"releaseGroup": "8300fe9c-0022-3c55-8a3e-8dc61f282e8c",
+		"artist": "Soundgarden",
+		"title": "Superunknown",
+		"year": 1994,
+		"genre": "grunge"
+	},
+	{
+		"release": "18cfecf4-c838-4b14-b3e1-4ce201f01ea5",
+		"releaseGroup": "4180845c-8700-3fda-af8f-0b9f3a932009",
+		"artist": "Spice Girls",
+		"title": "Spice",
+		"year": 1996,
+		"genre": "dance-pop"
+	},
+	{
+		"release": "4f0d5cb0-d9af-438f-b4c1-645cd233975c",
+		"releaseGroup": "ea88b09b-fd34-33cf-a3e5-25a3a2fb4c6f",
+		"artist": "Stevie Wonder",
+		"title": "Songs in the Key of Life",
+		"year": 1976,
+		"genre": "rhythm and blues"
+	},
+	{
+		"release": "748b5ae5-7167-49b8-848c-1150af3eae59",
+		"releaseGroup": "f50fbcb4-bfcd-3784-b4c9-44f4793e66b2",
+		"artist": "System of a Down",
+		"title": "Toxicity",
+		"year": 2001,
+		"genre": "alternative metal"
+	},
+	{
+		"release": "156671ad-34d7-41f6-b9d2-7e910019a3ef",
+		"releaseGroup": "63eba062-847c-3b73-8b0f-6baf27bba6fa",
+		"artist": "Taylor Swift",
+		"title": "Fearless",
+		"year": 2008,
+		"genre": "country pop"
+	},
+	{
+		"release": "aacc5091-c9b6-4a49-b7c3-87fffebfaefb",
+		"releaseGroup": "9f7a4c28-8fa2-3113-929c-c47a9f7982c3",
+		"artist": "The Beatles",
+		"title": "Sgt. Pepper’s Lonely Hearts Club Band",
+		"year": 1967,
+		"genre": "baroque pop"
+	},
+	{
+		"release": "b0f2f06b-09b5-44ba-9e5d-73a25944d3f1",
+		"releaseGroup": "bb022fc8-55f5-4f4d-82d9-0b504099a3b1",
+		"artist": "The Black Eyed Peas",
+		"title": "The E•N•D",
+		"year": 2009,
+		"genre": "hip-hop"
+	},
+	{
+		"release": "7bec22a0-eb73-4b79-a619-b253d5c2af87",
+		"releaseGroup": "8d73e45e-7ca1-3cb4-ae28-6da76196c17c",
+		"artist": "The Clash",
+		"title": "London Calling",
+		"year": 1979,
+		"genre": "new wave"
+	},
+	{
+		"release": "4438e99b-ef1e-32d0-962d-79e9f511f64e",
+		"releaseGroup": "8ebffd15-06c3-3b88-a761-ec18c5513287",
+		"artist": "The Doors",
+		"title": "The Doors",
+		"year": 1967,
+		"genre": "acid rock"
+	},
+	{
+		"release": "132c997a-79f0-42dd-bfa6-3f3f3dc5105b",
+		"releaseGroup": "da40e720-2097-3730-8a7f-0c2ddbff4a96",
+		"artist": "The Jimi Hendrix Experience",
+		"title": "Are You Experienced",
+		"year": 1967,
+		"genre": "hard rock"
+	},
+	{
+		"release": "f5ee7a25-0121-432b-8ac2-0cdf3e714c2a",
+		"releaseGroup": "e8c09b4e-33ae-368b-8f70-24b4e14fb9ad",
+		"artist": "The Killers",
+		"title": "Hot Fuss",
+		"year": 2004,
+		"genre": "pop music"
+	},
+	{
+		"release": "c39794bb-1886-42d9-8a8e-a1be8ae8d5fa",
+		"releaseGroup": "5afcfeac-118a-35e6-af0d-35ec9003354d",
+		"artist": "The Notorious B.I.G.",
+		"title": "Ready to Die",
+		"year": 1994,
+		"genre": "East Coast hip-hop"
+	},
+	{
+		"release": "2e5af9d2-f262-3f73-ab47-4884e945fa8e",
+		"releaseGroup": "fb43ac3a-8d28-3686-8653-bbf15a5e4389",
+		"artist": "The Offspring",
+		"title": "Americana",
+		"year": 1998,
+		"genre": "pop-punk"
+	},
+	{
+		"release": "b0d666a5-5005-4d67-988e-3043afab5940",
+		"releaseGroup": "3ead83f6-f7f1-34a8-88e9-d6f9617a7939",
+		"artist": "The Pussycat Dolls",
+		"title": "PCD",
+		"year": 2005,
+		"genre": "pop music"
+	},
+	{
+		"release": "14bf5438-ac55-4ceb-9faa-7eefa73b875f",
+		"releaseGroup": "4838a3c9-fd2b-30a5-83eb-e32545b5d7fc",
+		"artist": "The Rolling Stones",
+		"title": "Exile on Main St.",
+		"year": 1972,
+		"genre": "rock and roll"
+	},
+	{
+		"release": "78ac78d7-1867-47f6-b2ec-2ed15d588ce2",
+		"releaseGroup": "d8dde278-482c-3cc8-a530-fea70476f3a5",
+		"artist": "The Smiths",
+		"title": "The Queen Is Dead",
+		"year": 1986,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "d93010e8-79a7-4ff8-8d34-60d4a7319c02",
+		"releaseGroup": "5cbd9d7b-597a-3c5e-bfd1-c2b364215560",
+		"artist": "The Velvet Underground & Nico",
+		"title": "The Velvet Underground & Nico",
+		"year": 1967,
+		"genre": "proto-punk"
+	},
+	{
+		"release": "12fc7ee3-a1dc-4940-b65d-e011980ec790",
+		"releaseGroup": "78570bea-2a26-467c-a3db-c52723ceb394",
+		"artist": "The Weeknd",
+		"title": "After Hours",
+		"year": 2020,
+		"genre": "contemporary R&B"
+	},
+	{
+		"release": "8c0f0459-3c44-4d00-b8d5-d21cd0b1648d",
+		"releaseGroup": "9584e28b-66a7-3846-8d52-b3008a283539",
+		"artist": "The Who",
+		"title": "Who’s Next",
+		"year": 1971,
+		"genre": "hard rock"
+	},
+	{
+		"release": "7e7025b6-4035-40d9-9be6-a9a4b0e51a74",
+		"releaseGroup": "9621fe3a-e95d-3dfc-885b-bda4338f25a6",
+		"artist": "Thirty Seconds to Mars",
+		"title": "A Beautiful Lie",
+		"year": 2005,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "cb0491f4-7f39-4335-a38a-1f34b506489e",
+		"releaseGroup": "ecfd0a01-57c8-3949-990a-1a950942e0e0",
+		"artist": "Tool",
+		"title": "10,000 Days",
+		"year": 2006,
+		"genre": "alternative rock"
+	},
+	{
+		"release": "c65f7bd0-c43d-4d4f-91d6-785cddb1065a",
+		"releaseGroup": "cf556b32-6f0c-4d32-9cbb-cc219a20566f",
+		"artist": "twenty one pilots",
+		"title": "Blurryface",
+		"year": 2015,
+		"genre": "alternative hip-hop"
+	},
+	{
+		"release": "19fb4543-45ee-4ded-a07b-32568f6214b0",
+		"releaseGroup": "6f3e9fa6-be7a-3de8-a2b2-2072ece8a54d",
+		"artist": "U2",
+		"title": "The Joshua Tree",
+		"year": 1987,
+		"genre": "pop rock"
+	},
+	{
+		"release": "b7b9c570-ecba-444e-9d25-1531b125124f",
+		"releaseGroup": "131d12c0-e720-31df-a2f9-d9abd868ceaf",
+		"artist": "Whitney Houston",
+		"title": "Whitney Houston",
+		"year": 1985,
+		"genre": "popular music"
+	},
+	{
+		"release": "971fa477-074b-4f7c-ab7a-a75dd610b84d",
+		"releaseGroup": "5a59b948-1961-32ff-80d9-e970c7d4ebe9",
+		"artist": "Yes",
+		"title": "Close to the Edge",
+		"year": 1972,
+		"genre": "progressive rock"
+	}
+]

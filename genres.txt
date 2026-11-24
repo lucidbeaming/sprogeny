@@ -1,0 +1,197 @@
+jazz
+hip hop
+experimental
+ambient
+classical
+punk
+alternative rock
+metal
+indie rock
+pop rock
+country
+folk
+downtempo
+house
+techno
+soul
+hard rock
+heavy metal
+blues
+industrial
+synth-pop
+instrumental
+electro
+classic rock
+black metal
+folk rock
+reggae
+death metal
+trance
+progressive rock
+r&b
+lo-fi
+dance
+psychedelic rock
+noise
+new wave
+latin
+funk
+blues rock
+idm
+rock and roll
+drone
+disco
+post-rock
+dark ambient
+singer-songwriter
+drum and bass
+indie pop
+chillwave
+electronica
+post-punk
+ballad
+rockabilly
+instrumental hip hop
+psychedelic
+boom bap
+dub
+doom metal
+modern classical
+soft rock
+trip hop
+lo-fi hip hop
+vaporwave
+ebm
+dubstep
+easy listening
+schlager
+thrash metal
+deep house
+country rock
+new age
+synthwave
+contemporary jazz
+shoegaze
+breakbeat
+garage rock
+swing
+progressive metal
+punk rock
+stoner rock
+avant-garde
+progressive house
+art rock
+tech house
+dance-pop
+emo
+dark wave
+chillout
+ska
+j-pop
+grunge
+progressive trance
+grindcore
+baroque
+non-music
+comedy
+psytrance
+power metal
+contemporary r&b
+alternative metal
+acoustic rock
+breaks
+bluegrass
+pop punk
+metalcore
+big band
+europop
+euro house
+chiptune
+orchestral
+jungle
+electropop
+leftfield
+roots reggae
+power pop
+post-hardcore
+dream pop
+hardcore punk
+pop rap
+americana
+contemporary classical
+smooth jazz
+space rock
+glitch
+trap
+opera
+celtic
+breakcore
+gangsta rap
+gospel
+edm
+vocal jazz
+gothic
+melodic death metal
+progressive
+hard trance
+club
+romantic classical
+dancehall
+free jazz
+southern rock
+krautrock
+jazz-funk
+experimental electronic
+concerto
+chanson française
+electro house
+neofolk
+hard house
+indie folk
+underground hip hop
+christmas music
+nu metal
+contemporary country
+gothic metal
+symphonic rock
+jazz rock
+industrial metal
+symphony
+gothic rock
+britpop
+doo-wop
+electric blues
+alternative pop
+classic country
+jazz fusion
+math rock
+post-metal
+atmospheric black metal
+free improvisation
+experimental rock
+hard bop
+post-bop
+bebop
+spoken word
+symphonic metal
+sludge metal
+soul jazz
+arena rock
+musical
+conscious hip hop
+happy hardcore
+speed metal
+alternative country
+cool jazz
+contemporary folk
+stoner metal
+noise rock
+folk metal
+neo soul
+latin jazz
+bossa nova
+filk
+plunderphonics
+future funk
+eurodance
+grime

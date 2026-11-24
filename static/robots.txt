@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /api/
+Disallow: /combine
+Disallow: /login
+Disallow: /logout
+
+Sitemap: https://sprogeny.com/sitemap.xml

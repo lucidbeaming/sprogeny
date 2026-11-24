@@ -1,0 +1,47 @@
+# Sprogeny
+
+> Sprogeny (sprogeny.com) is a free web app that combines multiple Spotify playlists into a single weighted, truly random mix. Not affiliated with Spotify AB.
+
+## What it does
+
+Takes two or more Spotify playlists, lets the user assign a weight (ratio) to each, and generates a new playlist in the user's Spotify library — randomly shuffled with no play-count weighting, no algorithmic track promotion, no emotional weighting.
+
+## Key features
+
+- Combine any number of Spotify playlists
+- Per-playlist weight sliders control track proportions
+- Output playlist created directly in the user's Spotify library
+- Source playlists are never modified
+- Free, no ads, no tracking cookies
+- Sign in with existing Spotify account via OAuth — no separate account needed
+- No AI or recommendation algorithms involved in track selection
+
+## How it works
+
+1. User authenticates with Spotify via OAuth 2.0 (Sprogeny never receives the Spotify password)
+2. User adds source playlists by pasting a link or selecting from their library
+3. User adjusts weight sliders to set the mix ratio
+4. User hits Generate; Sprogeny builds a weighted random shuffle and creates a new playlist via the Spotify API
+5. The new playlist appears in the user's Spotify library immediately
+
+## Privacy
+
+- Session stored in encrypted cookie only
+- Playlist and track data used in-memory during session, not persisted afterward
+- Non-reversible hash of used tracks stored to avoid duplicates across combine operations
+- Self-hosted cookieless analytics (Matomo) — no personal data, no third-party sharing
+- Spotify permissions: playlist-read-private, playlist-read-collaborative, playlist-modify-public, playlist-modify-private
+
+## Tech stack
+
+SvelteKit 2, Svelte 5, TypeScript, Three.js, Spotify Web API, adapter-node
+
+## Public pages
+
+- https://sprogeny.com/ — Homepage
+- https://sprogeny.com/faq — FAQ and privacy information
+- https://sprogeny.com/terms — Terms of use
+
+## What it is not
+
+Sprogeny does not play music. It creates playlists in Spotify, which users play using the Spotify app. It is not a streaming service, Spotify alternative, or playlist management dashboard.
