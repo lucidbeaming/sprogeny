@@ -4,17 +4,34 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+### Changed
+
+- **Breaking:** the Flask prototype is replaced by the SvelteKit app behind sprogeny.com: combine several playlists with weighted sliders into 1 to 5 new playlists, with Spotify sign-in, PostgreSQL and a build-time album cover carousel. The Flask code stays under the `flask-legacy` tag (#17)
+- README rewritten for the SvelteKit app: Spotify Development Mode limits, setup, scripts, logging, cover pipeline and credits (#17)
+
+### Added
+
+- CI: type check, lint and build on pushes and pull requests (#17)
+
+### Fixed
+
+- better-auth warnings and errors reach the app's `[Sprogeny:Auth]` logger; the old `error`/`warn` options were ignored (#17)
+- `.env.example` includes `POSTGRES_PASSWORD`, which `npm run db:start` needs (#17)
+
 ## [1.0.0] - 2026-11-23
 
 Final release of the original Flask prototype: enter a Spotify username, pick one of their public playlists, and get up to three shuffled "offspring" playlists. It predates Spotify's February 2026 API changes and won't be updated for them; v2.0.0 replaces it with the SvelteKit app behind sprogeny.com. This code stays available under the `flask-legacy` tag.
 
 ### Added
+
 - README: screenshots, Spotify API warning (#10), requirements, configuration defaults, how the three playlists are sliced, related projects (#11)
 
 ### Changed
+
 - Repository metadata (#5)
 
 ### Fixed
+
 - README: this Flask code is the original prototype. The live service is a newer SvelteKit version; this prototype won't be updated for the February 2026 Spotify API changes (#10)
 - README frames the project as a proof of concept for a public service whose live deployment is restricted by Spotify's Development Mode limits (#10)
 - README warning puts the 5-user manual allowlist first, notes that Extended Quota is closed to individuals, and clarifies that each user can still use their own playlists (#10)

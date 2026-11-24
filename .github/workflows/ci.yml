@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    # The build loads server modules, which need DATABASE_URL and a non-default auth secret,
+    # and reads SIMULATIONMODE at build time. .env.example supplies the first and last; the
+    # secret is a placeholder, since CI never serves requests. SPLASH_SKIP leaves out the
+    # album cover download, which only the deployed site needs.
+    env:
+      BETTER_AUTH_SECRET: ci-build-only-not-a-real-secret-0123456789
+      SPLASH_SKIP: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: cp .env.example .env
+      - run: npm ci
+      - run: npm run check
+      - run: npm run lint
+      - run: npm run build

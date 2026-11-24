@@ -1,0 +1,7 @@
+# MusicBrainz IDs that scripts/curate-splash-covers.mjs skips, one per line.
+# A release group ID drops the album. A release ID drops only that pressing's scan,
+# so another pressing of the same album is tried (for photos with an obi strip, a sticker,
+# or the jewel case). Then rerun: node scripts/curate-splash-covers.mjs
+
+# Scorpions - Virgin Killer (1976): the original cover shows a nude child
+49688214-8984-3529-9f28-065262d5c845
