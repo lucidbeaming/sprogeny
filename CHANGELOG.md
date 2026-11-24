@@ -4,6 +4,10 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+## [2.0.1] - 2026-11-23
+
+Documentation only: this repo is described as a snapshot of the code behind sprogeny.com, which is developed in a private repo.
+
 ### Fixed
 
 - README and the 2.0.0 notes describe this repo as a snapshot of the live code, which is developed in a private repo; the 2.0.0 notes no longer give steps for moving a deployment here (#20)
@@ -49,6 +53,7 @@ Final release of the original Flask prototype: enter a Spotify username, pick on
 - Raised vulnerable pins: Flask 3.1.3, Werkzeug 3.1.9, gunicorn 27.0.1, spotipy 2.26.0, python-dotenv 1.2.4. spotipy 2.26 also reads and adds playlist items through Spotify's new `/items` endpoints (#4)
 - `.gitignore` regenerated from GitHub's Python template: wrapped comment lines had become 19 bogus ignore patterns. Adds macOS/editor/env entries and an explicit entry for spotipy's `.cache` token file (#7)
 
-[Unreleased]: https://github.com/lucidbeaming/sprogeny/compare/v2.0.0...HEAD
+[Unreleased]: https://github.com/lucidbeaming/sprogeny/compare/v2.0.1...HEAD
+[2.0.1]: https://github.com/lucidbeaming/sprogeny/compare/v2.0.0...v2.0.1
 [2.0.0]: https://github.com/lucidbeaming/sprogeny/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/lucidbeaming/sprogeny/releases/tag/v1.0.0
