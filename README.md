@@ -1,6 +1,6 @@
 # Sprogeny
 
-Sprogeny is a web app that combines and shuffles multiple Spotify playlists into fresh, new playlists. Sign in with Spotify, select your playlists, adjust weights, and generate blended playlists without manually dragging tracks around. This is the code behind [sprogeny.com](https://sprogeny.com).
+Sprogeny is a web app that combines and shuffles multiple Spotify playlists into fresh, new playlists. Sign in with Spotify, select your playlists, adjust weights, and generate blended playlists without manually dragging tracks around. This repo is a snapshot of the code behind [sprogeny.com](https://sprogeny.com) as of v2.0. The live site is developed in a private repo, so it may have moved on since.
 
 ![The Sprogeny home page: the title over a wall of album covers, with the tagline "Mashup multiple Spotify playlists"](static/images/ui/sprogenypreview.jpg)
 
