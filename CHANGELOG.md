@@ -4,11 +4,15 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+### Fixed
+
+- README and the 2.0.0 notes describe this repo as a snapshot of the live code, which is developed in a private repo; the 2.0.0 notes no longer give steps for moving a deployment here (#20)
+
 ## [2.0.0] - 2026-11-23
 
 Sprogeny 2.0 is the SvelteKit app behind [sprogeny.com](https://sprogeny.com), replacing the original Flask prototype. Sign in with Spotify, add playlists from your library or by link, weight them with sliders, and generate 1 to 5 shuffled, deduplicated playlists of 10 to 300 tracks. The live service runs under Spotify's Development Mode limit of 5 hand-added users. The Flask code stays available under the `flask-legacy` tag (v1.0.0).
 
-**Moving a deployment from the private repo:** the histories are unrelated, so switch the remote and reset once (ignored files such as `node_modules`, `.env` and the downloaded covers are kept): `git remote set-url origin https://github.com/lucidbeaming/sprogeny.git && git fetch origin && git reset --hard origin/main`
+This repo is a snapshot of the code behind sprogeny.com; the live site is developed in a private repo.
 
 ### Changed
 
