@@ -4,6 +4,12 @@ All notable changes to this project are documented here. The format is based on 
 
 ## [Unreleased]
 
+## [2.0.0] - 2026-11-23
+
+Sprogeny 2.0 is the SvelteKit app behind [sprogeny.com](https://sprogeny.com), replacing the original Flask prototype. Sign in with Spotify, add playlists from your library or by link, weight them with sliders, and generate 1 to 5 shuffled, deduplicated playlists of 10 to 300 tracks. The live service runs under Spotify's Development Mode limit of 5 hand-added users. The Flask code stays available under the `flask-legacy` tag (v1.0.0).
+
+**Moving a deployment from the private repo:** the histories are unrelated, so switch the remote and reset once (ignored files such as `node_modules`, `.env` and the downloaded covers are kept): `git remote set-url origin https://github.com/lucidbeaming/sprogeny.git && git fetch origin && git reset --hard origin/main`
+
 ### Changed
 
 - **Breaking:** the Flask prototype is replaced by the SvelteKit app behind sprogeny.com: combine several playlists with weighted sliders into 1 to 5 new playlists, with Spotify sign-in, PostgreSQL and a build-time album cover carousel. The Flask code stays under the `flask-legacy` tag (#17)
@@ -39,5 +45,6 @@ Final release of the original Flask prototype: enter a Spotify username, pick on
 - Raised vulnerable pins: Flask 3.1.3, Werkzeug 3.1.9, gunicorn 27.0.1, spotipy 2.26.0, python-dotenv 1.2.4. spotipy 2.26 also reads and adds playlist items through Spotify's new `/items` endpoints (#4)
 - `.gitignore` regenerated from GitHub's Python template: wrapped comment lines had become 19 bogus ignore patterns. Adds macOS/editor/env entries and an explicit entry for spotipy's `.cache` token file (#7)
 
-[Unreleased]: https://github.com/lucidbeaming/sprogeny/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/lucidbeaming/sprogeny/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/lucidbeaming/sprogeny/compare/v1.0.0...v2.0.0
 [1.0.0]: https://github.com/lucidbeaming/sprogeny/releases/tag/v1.0.0
